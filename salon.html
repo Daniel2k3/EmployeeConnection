@@ -1,0 +1,2873 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<!--Activity List html-->
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>EmployeeConnection</title> 
+	<link rel = "stylesheet" href = "menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">
+            <div id = "logged-in">
+                <h3>Activites List</h3>
+            </div> 
+		</div> 
+        </div>
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<i class="fa fa-bell fa-2x" aria-hidden="true"></i> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<div class="nav-upper-options"> 
+					<div class="nav-option option1"> 
+						<i class="fa fa-home fa-2x" aria-hidden="true"></i> 
+                            <a href="adminHOME.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>HOME</h3></a>
+					</div> 
+
+					<div class="option2 nav-option"> 
+						<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+						<a href="Calendar.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>CALENDAR</h3></a>
+					</div> 
+
+					<div class="nav-option option3"> 
+						<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+						<a href="report.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 3px;">
+                            <h3>REPORT</h3></a> 
+					</div> 
+
+					<div class="nav-option option4"> 
+						<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+						<a href="menu.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 10px;">
+                            <h3>MENU</h3></a>
+					</div> 
+
+					<div class="nav-option option5"> 
+						<i class="fa fa-users fa-2x" aria-hidden="true"></i>
+						<a href="residents.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 -55px;">
+                            <h3>RESIDENTS</h3></a> 
+					</div> 
+
+					<div class="nav-option option6"> 
+						<i class="fa fa-list-ol fa-2x" aria-hidden="true"></i>
+						<a href="salon.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 0px;">
+                            <h3>ACTIVITIES</h3></a> 
+					</div> 
+                    
+                    <form action = "" id = "LOGOUT">
+					<div class="nav-option logout"> 
+						<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+                        
+						<button type = "submit" class = "login-btn" style = "border: none; background: none; font-size:medium; 
+                        font-weight: bolder; padding: 0 0px 0 0px; cursor: pointer;">
+                        <h3>LOGOUT</h3>
+                        </button>
+					</div> 
+                    </form>
+				</div> 
+			</nav> 
+		</div>
+
+        
+
+<div style = "position:relative; left:450px;">
+        <!-- Book -->
+        <div id="book" class="book">
+
+            <!-- ALways Available -->
+            <div id="p1" class="paper">
+              <div class="front">
+                  <div id="f1" class="front-content">
+                      <h1>Monday</h1>
+                  </div>
+                  <div class = "container">
+                      <div class="menu">
+                          <table style="border: none;">
+                            <tbody>
+                              <button class="btn-open-popup" onclick="togglePopup()" 
+                              style = "font-weight: bolder; margin-left: 120px;">Update List</button>
+
+
+      <div id="popupOverlay" 
+              class="overlay-container"> 
+             <div class="popup-box">
+      <p>Activity 1</p>
+      <input type="text" id="act1" placeholder="Enter new title">
+
+      <button id="updateButton" style="  padding: 5px 5px; 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+      <p>Activity 2</p>
+      <input type="text" id="act2" placeholder="Enter new title">
+
+      <button id="updateButton2" style=" padding: 5px 5px; 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 3</p>
+      <input type="text" id="act3" placeholder="Enter new title">
+      <button id="updateButton3" style="  padding: 5px 5px; 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 4</p>
+      <input type="text" id="act4" placeholder="Enter new title">
+
+      <button id="updateButton4" style=" padding: 5px 5px; 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 5</p>
+      <input type="text" id="act5" placeholder="Enter new title">
+
+      <button id="updateButton5" style="  padding: 5px 5px; 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 6</p>
+      <input type="text" id="act6" placeholder="Enter new title">
+
+      <button id="updateButton6" style="  padding: 5px 5px; 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+      <button class="btn-close-popup" onclick="togglePopup()">Close</button>
+  </div>
+</div>
+
+                              <tr>
+                                <td><span id = "men1" style = "font-size: 11px;"></span></td>
+                                <td><span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <br>
+                        <div class="menu">
+                          <table style="border: none;">
+                            <tbody>
+                              <tr>
+                                <td><span id = "men4" style = "font-size: 11px;"></span></td>
+                                <td><span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <br>
+
+                        <div class="menu">
+                          <table style="border: none;">
+                            <tbody>
+
+                              <tr>
+                                <td><span id = "men5" style = "font-size: 11px;"></span></td>
+                                <td><span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                        <br>               
+                        
+                        <div class="menu">
+                          <table style="border: none;">
+                            <tbody>
+
+                              <tr>
+                                <td><span id = "men7" style = "font-size: 11px;"></span></td>
+                                <td><span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+<br>
+                        <div class="menu">
+                          <table style="border: none;">
+                            <tbody>
+
+                              <tr>
+                                <td><span id = "men8" style = "font-size: 11px;"></span></td>
+                                <td><span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                        <br>
+                        <div class="menu">
+                          <table style="border: none;">
+                            <tbody>
+
+                              <tr>
+                                <td><span id = "men9" style = "font-size: 11px;"></span></td>
+                                <td><span></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </div>
+                        <br>
+              </div>
+              </div>
+
+
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <h1>Tuesday</h1>
+                    </div>
+                    <div class = "container">
+                      <div class="menu">
+                          <table style="border: none;">
+                            <tbody>
+                              <button class="btn-open-popup" onclick="togglePopup2()" 
+                              style = "font-weight: bolder; margin-left: 120px;">Update List</button>
+
+
+      <div id="popupOverlay2" 
+              class="overlay-container"> 
+             <div class="popup-box">
+      <p>Activity 1</p>
+      <input type="text" id="act11" placeholder="Enter new title">
+
+      <button id="updateButton01" style="  
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+      <p>Activity 2</p>
+      <input type="text" id="act22" placeholder="Enter new title">
+
+      <button id="updateButton22" style=" 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 3</p>
+      <input type="text" id="act32" placeholder="Enter new title">
+      <button id="updateButton32" style=" 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 4</p>
+      <input type="text" id="act42" placeholder="Enter new title">
+
+      <button id="updateButton42" style="
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 5</p>
+      <input type="text" id="act52" placeholder="Enter new title">
+
+      <button id="updateButton52" style="  
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+      <p>Activity 6</p>
+      <input type="text" id="act62" placeholder="Enter new title">
+
+      <button id="updateButton62" style=" 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+      <button class="btn-close-popup" onclick="togglePopup2()">Close</button>
+  </div>
+</div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men1-" style = "font-size: 11px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men4-" style = "font-size: 11px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+      <br>                      
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men5-" style = "font-size: 11px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men7-" style = "font-size: 11px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men8-" style = "font-size: 11px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men9-" style = "font-size: 11px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+
+                    </div>
+            </div>
+            </div>
+
+
+
+            <!-- Wed -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <h1>Wednesday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+        
+                                <button class="btn-open-popup" onclick="togglePopup3()" 
+                                style = "font-weight: bolder; margin-left: 120px;">Update Menu</button>
+  
+
+        <div id="popupOverlay3" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Activity 1</p>
+        <input type="text" id="entree_1" placeholder="Enter new title">
+        <button id="updateButton023" style="  padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Activity 2</p>
+        <input type="text" id="entree_2" placeholder="Enter new title">
+        <button id="updateButton23" style=" padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 3</p>
+        <input type="text" id="soup" placeholder="Enter new title">
+        <button id="updateButton33" style="  padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 4</p>
+        <input type="text" id="salad" placeholder="Enter new title">
+        <button id="updateButton43" style=" padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 5</p>
+        <input type="text" id="dessert" placeholder="Enter new title">
+        <button id="updateButton53" style="  padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 6</p>
+        <input type="text" id="dessert6" placeholder="Enter new title">
+        <button id="updateButton63" style="  padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup3()">Close</button>
+    </div>
+</div>
+                                <tr>
+                                  <td><span id = "men90" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men10" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                        
+                                <tr>
+                                  <td><span id = "men11" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                            
+                                <tr>
+                                  <td><span id = "men12" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                          </div>
+      <br>                    
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                          
+                                <tr>
+                                  <td><span id = "men13" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                              
+                                <tr>
+                                  <td><span id = "men14" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+
+                </div>
+                </div>
+
+            
+
+
+
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h1>Thursday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <button class="btn-open-popup" onclick="togglePopup4()" 
+                                style = "font-weight: bolder; margin-left: 120px; ">Update Menu</button>
+  
+
+        <div id="popupOverlay4" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Activity 1</p>
+        <input type="text" id="entree_13" placeholder="Enter new title">
+        <input type="text" id="des_13" placeholder="Enter new description">
+        <button id="updateButton03" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Activity 2</p>
+        <input type="text" id="entree_23" placeholder="Enter new title">
+        <input type="text" id="des_23" placeholder="Enter new description">
+        <button id="updateButton23" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 3</p>
+        <input type="text" id="soup3" placeholder="Enter new title">
+        <input type="text" id="des_33" placeholder="Enter new description">
+        <button id="updateButton33" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 4</p>
+        <input type="text" id="salad3" placeholder="Enter new title">
+        <input type="text" id="des_43" placeholder="Enter new description">
+        <button id="updateButton43" style="
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 5</p>
+        <input type="text" id="dessert3" placeholder="Enter new title">
+        <input type="text" id="des_53" placeholder="Enter new description">
+        <button id="updateButton53" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 6</p>
+        <input type="text" id="dessert3" placeholder="Enter new title">
+        <input type="text" id="des_53" placeholder="Enter new description">
+        <button id="updateButton53" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup4()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men93" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men103" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <tr>
+                                  <td><span id = "men113" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                          
+                                <tr>
+                                  <td><span id = "men123" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+                          
+   <br>                       
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <tr>
+                                  <td><span id = "men133" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <tr>
+                                  <td><span id = "men143" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h1>Friday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                               
+                                <button class="btn-open-popup" onclick="togglePopup5()" 
+                                style = "font-weight: bolder; margin-left: 120px;">Update Menu</button>
+  
+
+        <div id="popupOverlay5" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Activity 1</p>
+        <input type="text" id="entree_14" placeholder="Enter new title">
+        <input type="text" id="des_14" placeholder="Enter new description">
+        <button id="updateButton04" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Activity 2</p>
+        <input type="text" id="entree_24" placeholder="Enter new title">
+        <input type="text" id="des_24" placeholder="Enter new description">
+        <button id="updateButton24" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 3</p>
+        <input type="text" id="soup44" placeholder="Enter new title">
+        <input type="text" id="des_344" placeholder="Enter new description">
+        <button id="updateButton344" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 4</p>
+        <input type="text" id="salad4" placeholder="Enter new title">
+        <input type="text" id="des_44" placeholder="Enter new description">
+        <button id="updateButton44" style="padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 5</p>
+        <input type="text" id="dessert4" placeholder="Enter new title">
+        <input type="text" id="des_54" placeholder="Enter new description">
+        <button id="updateButton54" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 6</p>
+        <input type="text" id="dessert4" placeholder="Enter new title">
+        <input type="text" id="des_54" placeholder="Enter new description">
+        <button id="updateButton54" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup5()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men94" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men104" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                      
+                          </div>
+<br>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                       
+                                <tr>
+                                  <td><span id = "men114" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                 
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                              
+                                <tr>
+                                  <td><span id = "men124" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                       
+                          </div>
+                          
+  <br>                        
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                          
+                                <tr>
+                                  <td><span id = "men134" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                          
+                                <tr>
+                                  <td><span id = "men144" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>Saturday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <button class="btn-open-popup" onclick="togglePopup6()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay6" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_15" placeholder="Enter new title">
+        <input type="text" id="des_15" placeholder="Enter new description">
+        <button id="updateButton05" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_25" placeholder="Enter new title">
+        <input type="text" id="des_25" placeholder="Enter new description">
+        <button id="updateButton25" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup5" placeholder="Enter new title">
+        <input type="text" id="des_35" placeholder="Enter new description">
+        <button id="updateButton345" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad5" placeholder="Enter new title">
+        <input type="text" id="des_45" placeholder="Enter new description">
+        <button id="updateButton45" style="
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert5" placeholder="Enter new title">
+        <input type="text" id="des_55" placeholder="Enter new description">
+        <button id="updateButton55" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup6()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men95" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men105" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                       
+                          </div>
+
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                               
+                                <tr>
+                                  <td><span id = "men115" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des115" style = "font-size: 13px;"><em></em></p>
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <tr>
+                                  <td><span id = "men125" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+                          
+      <br>                    
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                               
+                                <tr>
+                                  <td><span id = "men135" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                               
+                                <tr>
+                                  <td><span id = "men145" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Wed -->
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <h1>Sunday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <button class="btn-open-popup" onclick="togglePopup7()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay7" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Activity 1</p>
+        <input type="text" id="entree_146" placeholder="Enter new title">
+        <input type="text" id="des_146" placeholder="Enter new description">
+        <button id="updateButton046" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Activity 2</p>
+        <input type="text" id="entree_246" placeholder="Enter new title">
+        <input type="text" id="des_246" placeholder="Enter new description">
+        <button id="updateButton246" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 3</p>
+        <input type="text" id="soup446" placeholder="Enter new title">
+        <input type="text" id="des_3446" placeholder="Enter new description">
+        <button id="updateButton3446" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 4</p>
+        <input type="text" id="salad46" placeholder="Enter new title">
+        <input type="text" id="des_446" placeholder="Enter new description">
+        <button id="updateButton446" style="padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Activity 5</p>
+        <input type="text" id="dessert46" placeholder="Enter new title">
+        <input type="text" id="des_546" placeholder="Enter new description">
+        <button id="updateButton546" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+<p>Activity 6</p>
+<input type="text" id="dessert46" placeholder="Enter new title">
+<input type="text" id="des_546" placeholder="Enter new description">
+<button id="updateButton546" style=" padding: 5px 5px;
+border: none; 
+border-radius: 8px; 
+cursor: pointer; 
+transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup7()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men946" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men1046" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                               
+                                <tr>
+                                  <td><span id = "men1146" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                              
+                                <tr>
+                                  <td><span id = "men1246" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                         
+                          </div>
+  <br>                        
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <tr>
+                                  <td><span id = "men1346" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+<br>
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                
+                                <tr>
+                                  <td><span id = "men1446" style = "font-size: 11px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          
+                          </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="back">
+                    <div id="b4" class="back-content">
+                        <h1></h1>
+                    </div>
+                    <div class = "container">
+                        
+                          
+                    </div>
+                </div>
+            </div>
+
+           
+
+           
+
+        </div>
+
+        <button id="prev-btn">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+</div>
+
+<script>
+ function submit_form() {
+document.submitInfo.reset(); 
+}
+
+function togglePopup() { 
+    const overlay = document.getElementById('popupOverlay'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup2() { 
+    const overlay = document.getElementById('popupOverlay2'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup3() { 
+    const overlay = document.getElementById('popupOverlay3'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup4() { 
+    const overlay = document.getElementById('popupOverlay4'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup5() { 
+    const overlay = document.getElementById('popupOverlay5'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup6() { 
+    const overlay = document.getElementById('popupOverlay6'); 
+    overlay.classList.toggle('show'); 
+} 
+
+</script>
+
+<!--Book SCript-->
+<script>
+    const prevBtn = document.querySelector("#prev-btn");
+const nextBtn = document.querySelector("#next-btn");
+const book = document.querySelector("#book");
+
+const paper1 = document.querySelector("#p1");
+const paper2 = document.querySelector("#p2");
+const paper3 = document.querySelector("#p3");
+const paper4 = document.querySelector("#p4");
+const paper5 = document.querySelector("#p5");
+const paper6 = document.querySelector("#p6");
+
+// Event Listener
+prevBtn.addEventListener("click", goPrevPage);
+nextBtn.addEventListener("click", goNextPage);
+
+let currentLocation = 1;
+let numOfPapers = 8;
+let maxLocation = numOfPapers + 1;
+
+function openBook() {
+    book.style.transform = "translateX(50%)";
+    prevBtn.style.transform = "translateX(-180px)";
+    nextBtn.style.transform = "translateX(180px)";
+}
+
+function closeBook(isAtBeginning) {
+    if(isAtBeginning) {
+        book.style.transform = "translateX(0%)";
+    } else {
+        book.style.transform = "translateX(100%)";
+    }
+    
+    prevBtn.style.transform = "translateX(0px)";
+    nextBtn.style.transform = "translateX(0px)";
+}
+
+function goNextPage() {
+    if(currentLocation < maxLocation) {
+        switch(currentLocation) {
+            case 1:
+                openBook();
+                paper1.classList.add("flipped");
+                paper1.style.zIndex = 1;
+                break;
+            case 2:
+                paper2.classList.add("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 3:
+                paper3.classList.add("flipped");
+                paper3.style.zIndex = 3;
+                break;
+            case 4:
+                paper4.classList.add("flipped");
+                paper4.style.zIndex = 4;
+                break;
+            case 5:
+                paper5.classList.add("flipped");
+                paper5.style.zIndex = 5;
+                break;
+            case 6:
+                paper6.classList.add("flipped");
+                paper6.style.zIndex = 6;
+                closeBook(false);
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+        currentLocation++;
+    }
+}
+
+function goPrevPage() {
+    if(currentLocation > 1) {
+        switch(currentLocation) {
+            case 2:
+                closeBook(true);
+                paper1.classList.remove("flipped");
+                paper1.style.zIndex = 8;
+                break;
+            case 3:
+                paper2.classList.remove("flipped");
+                paper2.style.zIndex = 7;
+                break;
+            case 4:
+                paper3.classList.remove("flipped");
+                paper3.style.zIndex = 6;
+                break;
+
+            case 5:
+                paper4.classList.remove("flipped");
+                paper4.style.zIndex = 5;
+                break;
+            case 6:
+                paper5.classList.remove("flipped");
+                paper5.style.zIndex = 4;
+                break;
+            case 7:
+            closeBook(true);
+                paper6.classList.remove("flipped");
+                paper6.style.zIndex = 3;
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+
+        currentLocation--;
+    }
+}
+</script>
+
+<script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+<script src = "https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+	
+<script type="module">
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    const firebaseConfig = {
+            apiKey: "api here",
+            authDomain: "family-connections-bc7c6.firebaseapp.com",
+            databaseURL: "https://family-connections-bc7c6-default-rtdb.firebaseio.com",
+            projectId: "family-connections-bc7c6",
+            storageBucket: "family-connections-bc7c6.appspot.com",
+            messagingSenderId: "681718117358",
+            appId: "1:681718117358:web:b2ad9bcbd2542ddf1554ff",
+            measurementId: "G-YWV61PD4LS"
+            };
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+            const sub = document.getElementById('LOGOUT');
+            
+            //const auth = getAuth(app);
+            firebase.auth().onAuthStateChanged(function(user){
+    var logged = document.getElementById("logged-in")
+  })
+  sub.addEventListener("submit",function(event){
+            event.preventDefault()
+  firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+  alert("Signing out");
+  window.location.href = "AdminMOCK.html";
+}).catch((error) =>{
+  // An error happened.
+});
+  })
+
+
+//Inputs data into menu (AA-breakfast-eggs)
+// Reference to the subcollection
+const documentReff = db.collection('Activities').doc('Monday');
+// Function to display document data on HTML page
+function displayDocument(data) {
+    const titleElement = document.getElementById('men1');
+    titleElement.innerText = data.first;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore() {
+    // Update document with the new data
+    documentReff.update({
+        first : act1.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton').addEventListener('click', () => {
+    // Get user input
+    const newTitle = document.getElementById('act1').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore(newTitle);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument2(data) {
+  const descriptionElement = document.getElementById('men4');
+    descriptionElement.innerText = data.second;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument2(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore2() {
+    // Update document with the new data
+    documentReff.update({
+      second : act2.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton2').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act2').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore2(newTitle2);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument3(data) {
+  const descriptionElement = document.getElementById('men5');
+    descriptionElement.innerText = data.third;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument3(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore3() {
+    // Update document with the new data
+    documentReff.update({
+      third : act3.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton3').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act3').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore3(newTitle2);
+});
+
+// Function to display document data on HTML page
+function displayDocument4(data) {
+    const titleElement = document.getElementById('men7');
+    titleElement.innerText = data.fourth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument4(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore4() {
+    // Update document with the new data
+    documentReff.update({
+        fourth : act4.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton4').addEventListener('click', () => {
+    // Get user input
+    const newTitle = document.getElementById('act4').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore4(newTitle);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument5(data) {
+  const descriptionElement = document.getElementById('men8');
+    descriptionElement.innerText = data.fifth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore5() {
+    // Update document with the new data
+    documentReff.update({
+      fifth : act5.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton5').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act5').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore5(newTitle2);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument6(data) {
+  const descriptionElement = document.getElementById('men9');
+    descriptionElement.innerText = data.sixth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument6(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore6() {
+    // Update document with the new data
+    documentReff.update({
+      sixth : act6.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton6').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act6').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore6(newTitle2);
+});
+
+/*Tuesday*/
+
+const documentReff2 = db.collection('Activities').doc('Tuesday');
+// Function to display document data on HTML page
+function displayDocument21(data) {
+  const descriptionElement = document.getElementById('men1-');
+    descriptionElement.innerText = data.first;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff2.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument21(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore21() {
+    // Update document with the new data
+    documentReff2.update({
+      first : act11.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton01').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act11').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore21(newTitle2);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument22(data) {
+  const descriptionElement = document.getElementById('men4-');
+    descriptionElement.innerText = data.second;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff2.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument22(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore22() {
+    // Update document with the new data
+    documentReff2.update({
+      second : act2.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton22').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act22').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore22(newTitle2);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument32(data) {
+  const descriptionElement = document.getElementById('men5-');
+    descriptionElement.innerText = data.third;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff2.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument32(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore32() {
+    // Update document with the new data
+    documentReff2.update({
+      third : act32.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton32').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act32').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore32(newTitle2);
+});
+
+// Function to display document data on HTML page
+function displayDocument42(data) {
+    const titleElement = document.getElementById('men7-');
+    titleElement.innerText = data.fourth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff2.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument42(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore42() {
+    // Update document with the new data
+    documentReff2.update({
+        fourth : act42.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton42').addEventListener('click', () => {
+    // Get user input
+    const newTitle = document.getElementById('act42').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore42(newTitle);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument52(data) {
+  const descriptionElement = document.getElementById('men8-');
+    descriptionElement.innerText = data.fifth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff2.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument52(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore52() {
+    // Update document with the new data
+    documentReff2.update({
+      fifth : act52.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton52').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act52').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore52(newTitle2);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument62(data) {
+  const descriptionElement = document.getElementById('men9-');
+    descriptionElement.innerText = data.sixth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff2.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument62(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore62() {
+    // Update document with the new data
+    documentReff2.update({
+      sixth : act62.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton62').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act62').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore62(newTitle2);
+});
+
+
+
+/*Wednesday*/
+
+const documentReff3 = db.collection('Activities').doc('Wednesday');
+// Function to display document data on HTML page
+function displayDocument213(data) {
+  const descriptionElement = document.getElementById('men90');
+    descriptionElement.innerText = data.first;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff3.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument213(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore213() {
+    // Update document with the new data
+    documentReff3.update({
+      first : entree_1.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton023').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_1').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore213(newTitle2);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument223(data) {
+  const descriptionElement = document.getElementById('men10');
+    descriptionElement.innerText = data.second;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff3.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument223(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore223() {
+    // Update document with the new data
+    documentReff3.update({
+      second : entree_2.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton23').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_2').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore223(newTitle2);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument323(data) {
+  const descriptionElement = document.getElementById('men11');
+    descriptionElement.innerText = data.third;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff3.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument323(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore323() {
+    // Update document with the new data
+    documentReff3.update({
+      third : soup.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton33').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore32(newTitle2);
+});
+
+// Function to display document data on HTML page
+function displayDocument423(data) {
+    const titleElement = document.getElementById('men12');
+    titleElement.innerText = data.fourth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff3.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument423(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore423() {
+    // Update document with the new data
+    documentReff3.update({
+        fourth : act42.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton43').addEventListener('click', () => {
+    // Get user input
+    const newTitle = document.getElementById('act42').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore423(newTitle);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument523(data) {
+  const descriptionElement = document.getElementById('men13');
+    descriptionElement.innerText = data.fifth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff3.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument523(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore523() {
+    // Update document with the new data
+    documentReff3.update({
+      fifth : act52.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton53').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('act52').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore523(newTitle2);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument623(data) {
+  const descriptionElement = document.getElementById('men14');
+    descriptionElement.innerText = data.sixth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff3.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument623(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore623() {
+    // Update document with the new data
+    documentReff3.update({
+      sixth : act62.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+
+/*Thursday*////////
+
+const documentReff4 = db.collection('Activities').doc('Thursday');
+// Function to display document data on HTML page
+function displayDocument2134(data) {
+  const descriptionElement = document.getElementById('men93');
+    descriptionElement.innerText = data.first;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff4.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument2134(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument2234(data) {
+  const descriptionElement = document.getElementById('men103');
+    descriptionElement.innerText = data.second;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff4.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument2234(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument3234(data) {
+  const descriptionElement = document.getElementById('men113');
+    descriptionElement.innerText = data.third;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff4.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument3234(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument4234(data) {
+    const titleElement = document.getElementById('men123');
+    titleElement.innerText = data.fourth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff4.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument4234(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument5234(data) {
+  const descriptionElement = document.getElementById('men133');
+    descriptionElement.innerText = data.fifth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff4.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5234(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument6234(data) {
+  const descriptionElement = document.getElementById('men143');
+    descriptionElement.innerText = data.sixth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff4.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument6234(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+/*Friday*/
+
+const documentReff5 = db.collection('Activities').doc('Friday');
+// Function to display document data on HTML page
+function displayDocument21345(data) {
+  const descriptionElement = document.getElementById('men94');
+    descriptionElement.innerText = data.first;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff5.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument21345(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument22345(data) {
+  const descriptionElement = document.getElementById('men104');
+    descriptionElement.innerText = data.second;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff5.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument22345(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument32345(data) {
+  const descriptionElement = document.getElementById('men114');
+    descriptionElement.innerText = data.third;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff5.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument32345(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument4235(data) {
+    const titleElement = document.getElementById('men124');
+    titleElement.innerText = data.fourth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff5.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument4235(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument52345(data) {
+  const descriptionElement = document.getElementById('men134');
+    descriptionElement.innerText = data.fifth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff5.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument52345(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument62345(data) {
+  const descriptionElement = document.getElementById('men144');
+    descriptionElement.innerText = data.sixth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff5.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument62345(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+
+/*Saturday*/
+
+const documentReff6 = db.collection('Activities').doc('Saturday');
+// Function to display document data on HTML page
+function displayDocument21345A(data) {
+  const descriptionElement = document.getElementById('men95');
+    descriptionElement.innerText = data.first;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff6.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument21345A(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument22345B(data) {
+  const descriptionElement = document.getElementById('men105');
+    descriptionElement.innerText = data.second;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff6.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument22345B(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument32345C(data) {
+  const descriptionElement = document.getElementById('men115');
+    descriptionElement.innerText = data.third;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff6.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument32345C(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument4235D(data) {
+    const titleElement = document.getElementById('men125');
+    titleElement.innerText = data.fourth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff6.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument4235D(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument52345E(data) {
+  const descriptionElement = document.getElementById('men135');
+    descriptionElement.innerText = data.fifth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff6.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument52345E(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument62345F(data) {
+  const descriptionElement = document.getElementById('men145');
+    descriptionElement.innerText = data.sixth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff6.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument62345F(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+/*Sunday*/
+
+const documentReff7 = db.collection('Activities').doc('Sunday');
+// Function to display document data on HTML page
+function displayDocument21345AA(data) {
+  const descriptionElement = document.getElementById('men946');
+    descriptionElement.innerText = data.first;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff7.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument21345AA(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument22345BB(data) {
+  const descriptionElement = document.getElementById('men1046');
+    descriptionElement.innerText = data.second;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff7.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument22345BB(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument32345CC(data) {
+  const descriptionElement = document.getElementById('men1146');
+    descriptionElement.innerText = data.third;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff7.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument32345CC(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument4235DD(data) {
+    const titleElement = document.getElementById('men1246');
+    titleElement.innerText = data.fourth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff7.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument4235DD(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+// Function to display document data on HTML page
+function displayDocument52345EE(data) {
+  const descriptionElement = document.getElementById('men1346');
+    descriptionElement.innerText = data.fifth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff7.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument52345EE(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+
+// Function to display document data on HTML page
+function displayDocument62345FF(data) {
+  const descriptionElement = document.getElementById('men1446');
+    descriptionElement.innerText = data.sixth;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff7.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument62345FF(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+</script>
+</body> 
+</html>

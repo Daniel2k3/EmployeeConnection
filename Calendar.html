@@ -1,0 +1,548 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>EmployeeConnection-Calendar</title> 
+	<link rel = "stylesheet" href = "calendar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">
+            <div id = "logged-in">
+                <h3>Calendar</h3>
+            </div> 
+		</div> 
+        </div>
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<i class="fa fa-bell fa-2x" aria-hidden="true"></i> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<div class="nav-upper-options"> 
+					<div class="nav-option option1"> 
+						<i class="fa fa-home fa-2x" aria-hidden="true"></i> 
+                            <a href="adminHOME.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>HOME</h3></a>
+					</div> 
+
+					<div class="option2 nav-option"> 
+						<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+						<a href="Calendar.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>CALENDAR</h3></a>
+					</div> 
+
+					<div class="nav-option option3"> 
+						<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+						<a href="report.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 3px;">
+                            <h3>REPORT</h3></a> 
+					</div> 
+
+					<div class="nav-option option4"> 
+						<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+						<a href="menu.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 10px;">
+                            <h3>MENU</h3></a>
+					</div> 
+
+					<div class="nav-option option5"> 
+						<i class="fa fa-users fa-2x" aria-hidden="true"></i>
+						<a href="residents.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 -55px;">
+                            <h3>RESIDENTS</h3></a> 
+					</div> 
+
+					<div class="nav-option option6"> 
+						<i class="fa fa-list-ol fa-2x" aria-hidden="true"></i>
+						<a href="salon.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 0px;">
+                            <h3>ACTIVITIES</h3></a> 
+					</div> 
+                    
+                    <form action = "" id = "LOGOUT">
+					<div class="nav-option logout"> 
+						<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+                        
+						<button type = "submit" class = "login-btn" style = "border: none; background: none; font-size:medium; 
+                        font-weight: bolder; padding: 0 0px 0 0px; cursor: pointer;">
+                        <h3>LOGOUT</h3>
+                        </button>
+					</div> 
+                    </form>
+				</div> 
+			</nav> 
+		</div> 
+
+
+
+	<!--Calendar-->
+  <body>
+    <div class="container">
+      <div class="calendar">
+        <div class="header">
+          <div class="month"></div>
+          <div class="btns">
+            <button class="btn-open-popup" onclick="togglePopup()" style = "font-weight: bolder;">Add Event</button>  
+            <button class="btn-open-popup" onclick="togglePop()" style = "font-weight: bolder;">View Table</button> 
+            <div class="btn today-btn">
+              <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+            </div>
+            <div class="btn prev-btn">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="btn next-btn">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="weekdays">
+          <div class="day">Sun</div>
+          <div class="day">Mon</div>
+          <div class="day">Tue</div>
+          <div class="day">Wed</div>
+          <div class="day">Thu</div>
+          <div class="day">Fri</div>
+          <div class="day">Sat</div>
+        </div>
+        <div class="days">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--ADD FORM-->
+    <div id="popupOver" class="overlay-container"> 
+    <div id="event-section">
+      <form class = "form-container" id="submitInfo">
+      <h3>Add Event</h3>
+
+      <input type="text" id="resident" placeholder="Resident Name" required>
+      <input type="text"id="start"placeholder="Start Time" required>
+      <input type="text"id="end"placeholder="End Time" required>
+      <input type="date" id="eventDate" required>
+     
+      <select id="eventTitle" name="eventTitle" required>
+                  <option value="">Add Event</option>
+                  <option value="salon">Salon Appointment</option>
+                  <option value="act">Activity</option>
+                  <option value="family">Family Event</option>
+                  <option value="other">Other</option>
+      </select>
+      <input type="text"id="eventDescription" placeholder="Event Description" required>
+      <button id="addEvent" onclick="submit_form()">Add</button>
+      </form>
+      <button class="btn-close-popup" onclick="togglePopup()">Close</button>
+      <button class="btn-open-popup" onclick="togglePopuP()" style = "font-weight: bolder;">Delete Event</button>  
+  </div>
+    </div>
+    
+<!--Delete Event-->
+    <div id="popuP" class="overlay-container"> 
+      <div id="event-section">
+    <form id="deleteForm">
+      <h3>Delete Event</h3>
+      <label for="identifier">Enter Resident:</label>
+      <input type="text" id="identifier" name="identifier" required>
+      <br>
+      <label for="identifier2">Enter Date:</label>
+      <input type="date" id="identifier2" name="identifier2" required>
+      <br>
+      <label for="identifier3">Enter Event:</label>
+      <br>
+      <select id="identifier3" name="identifier3" required>
+        <option value="">Select Event</option>
+        <option value="salon">Salon Appointment</option>
+        <option value="act">Activity</option>
+        <option value="family">Family Event</option>
+        <option value="other">Other</option>
+</select>
+      <button type="submit">Delete</button>
+      <button class="btn-close-popup" onclick="togglePopuP()">Close</button>
+    </form>
+      </div>
+    </div>
+
+    <script> 
+      function togglePopup() { 
+          const overlay = document.getElementById('popupOver'); 
+          overlay.classList.toggle('show'); 
+      } 
+      function togglePop() { 
+          const overlay = document.getElementById('popup'); 
+          overlay.classList.toggle('show'); 
+      } 
+      function togglePopuP() { 
+          const overlay = document.getElementById('popuP'); 
+          overlay.classList.toggle('show'); 
+      } 
+  </script> 
+
+
+
+
+<!--TABLE-->
+<div id="popup" class="overlay-container">
+    <div class = "tablecontainer">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <div class="scrollit">
+  <table class="table is-striped is-narrow is-hoverable is-fullwidth" id = "mainTable">
+      <thead>
+      <tr>
+          <th>Resident</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Description</th>
+
+      </tr>
+      </thead>
+      <tbody id="myTable">
+      </tbody>
+      
+  </table>
+</div>
+<button class="btn-close-popup" onclick="togglePop()">Close</button>
+</div>
+</div>
+
+<!--Search Function for Table-->
+<script>
+  function myFunction() {
+// Declare variables
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+table = document.getElementById("mainTable");
+tr = table.getElementsByTagName("tr");
+
+// Loop through all table rows, and hide those who don't match the search query
+for (i = 0; i < tr.length; i++) {
+  td = tr[i].getElementsByTagName("td")[0];
+  if (td) {
+    txtValue = td.textContent || td.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      tr[i].style.display = "";
+    } else {
+      tr[i].style.display = "none";
+    }
+  }
+}
+}
+</script>
+
+
+<script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+<script src = "https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+	
+
+
+<script type="module">
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    const firebaseConfig = {
+            apiKey: "API here",
+            authDomain: "family-connections-bc7c6.firebaseapp.com",
+            databaseURL: "https://family-connections-bc7c6-default-rtdb.firebaseio.com",
+            projectId: "family-connections-bc7c6",
+            storageBucket: "family-connections-bc7c6.appspot.com",
+            messagingSenderId: "681718117358",
+            appId: "1:681718117358:web:b2ad9bcbd2542ddf1554ff",
+            measurementId: "G-YWV61PD4LS"
+            };
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+            const sub = document.getElementById('LOGOUT');
+			const form = document.getElementById('login');
+  
+  sub.addEventListener("submit",function(event){
+            event.preventDefault()
+  firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+  alert("Signing out");
+  window.location.href = "AdminMOCK.html";
+}).catch((error) => {
+  // An error happened.
+});
+  })
+
+  function submit_form() {
+document.submitInfo.submit();
+document.submitInfo.reset(); 
+}
+
+  const daysContainer = document.querySelector(".days"),
+  nextBtn = document.querySelector(".next-btn"),
+  prevBtn = document.querySelector(".prev-btn"),
+  month = document.querySelector(".month"),
+  todayBtn = document.querySelector(".today-btn");
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+// get current date
+const date = new Date();
+
+// get current month
+let currentMonth = date.getMonth();
+
+// get current year
+let currentYear = date.getFullYear();
+
+let currentDay = date.getDay();
+
+// function to render days
+function renderCalendar() {
+  // get prev month current month and next month days
+  date.setDate(1);
+  const firstDay = new Date(currentYear, currentMonth, 1);
+  const lastDay = new Date(currentYear, currentMonth + 1, 0);
+  const lastDayIndex = lastDay.getDay();
+  const lastDayDate = lastDay.getDate();
+  const prevLastDay = new Date(currentYear, currentMonth, 0);
+  const prevLastDayDate = prevLastDay.getDate();
+  const nextDays = 7 - lastDayIndex - 1;
+
+  // update current year and month in header
+  month.innerHTML = `${months[currentMonth]} ${currentYear}`;
+
+  // update days html
+  let days = "";
+
+  // prev days html
+  for (let x = firstDay.getDay(); x > 0; x--) {
+    days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
+  }
+
+  // current month days
+  for (let i = 1; i <= lastDayDate; i++) {
+    // check if its today then add today class
+    if (
+      i === new Date().getDate() &&
+      currentMonth === new Date().getMonth() &&
+      currentYear === new Date().getFullYear()
+    ) {
+      // if date month year matches add today
+      days += `<div class="day today">${i}</div>`;
+    } else {
+      //else dont add today
+      days += `<div class="day ">${i}</div>`;
+    }
+  }
+
+  // next MOnth days
+  for (let j = 1; j <= nextDays; j++) {
+    days += `<div class="day next">${j}</div>`;
+  }
+
+  // run this function with every calendar render
+  hideTodayBtn();
+  daysContainer.innerHTML = days;
+}
+
+renderCalendar();
+
+nextBtn.addEventListener("click", () => {
+  // increase current month by one
+  currentMonth++;
+  if (currentMonth > 11) {
+    // if month gets greater that 11 make it 0 and increase year by one
+    currentMonth = 0;
+    currentYear++;
+  }
+  // rerender calendar
+  renderCalendar();
+});
+
+// prev monyh btn
+prevBtn.addEventListener("click", () => {
+  // increase by one
+  currentMonth--;
+  // check if let than 0 then make it 11 and deacrease year
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  renderCalendar();
+});
+
+// go to today
+todayBtn.addEventListener("click", () => {
+  // set month and year to current
+  currentMonth = date.getMonth();
+  currentYear = date.getFullYear();
+  // rerender calendar
+  renderCalendar();
+});
+
+// lets hide today btn if its already current month and vice versa
+
+function hideTodayBtn() {
+  if (
+    currentMonth === new Date().getMonth() &&
+    currentYear === new Date().getFullYear()
+  ) {
+    todayBtn.style.display = "none";
+  } else {
+    todayBtn.style.display = "flex";
+  }
+}
+
+let AddEv = document.querySelector('#submitInfo');
+
+AddEv.addEventListener('submit',(e)=> {
+
+e.preventDefault();//keeps page from refreshing
+db.collection('Calendar').add({
+  Resident: AddEv.resident.value,
+  Event: AddEv.eventTitle.value,
+  Start_TIME: AddEv.start.value,
+  End_TIME: AddEv.end.value,
+  Date: AddEv.eventDate.value,
+  Description: AddEv.eventDescription.value,
+});
+AddEv.resident.value = "";
+AddEv.eventTitle.value ="";
+AddEv.start.value ="";
+AddEv.end.value = "";
+AddEv.eventDate.value = "";
+AddEv.eventDescription.value = "";
+})
+
+/*Adds to the table from the database based on the submitted form*/
+  /*db.collection("Calendar").where("Resident", "==", "Dan Jenkins" ).get().then(querySnapshot=>{ display info for specific resident*/
+    db.collection("Calendar").get().then(querySnapshot=>{
+        querySnapshot.forEach(doc=> {
+            let data = doc.data();
+            let row  = `<tr>
+                            <td>${data.Resident}</td>
+                            <td>${data.Start_TIME}</td>
+                            <td>${data.End_TIME}</td>
+                            <td>${data.Event}</td>
+                            
+                            <td>${data.Date}</td>
+                            <td>${data.Description}</td>
+                      </tr>`;
+            let table = document.getElementById('myTable')
+            table.innerHTML += row
+        })
+    })
+    .catch(err=>{
+        console.log(`Error: ${err}`)
+    });
+
+
+    // Function to delete user from Firestore based on identifier
+function deleteUser(identifier,identifier2,identifier3) {
+  // Query Firestore to find the user document based on the identifier
+  db.collection("Calendar").where("Resident", "==", identifier).where("Date", "==", identifier2).where("Event", "==", identifier3).get()
+    .then((querySnapshot) => {
+       // Check if any matching documents are found
+       if (querySnapshot.size === 0) {
+        alert("Event not found");
+        return; // Exit function if no matching documents are found
+      }
+      querySnapshot.forEach((doc) => {
+        // Delete the user document from Firestore
+        db.collection("Calendar").doc(doc.id).delete()
+          .then(() => {
+            alert("Event successfully deleted");
+          })
+          .catch((error) => {
+            alert("Error deleting user from Firestore:", error);
+          });
+      });
+    })
+    .catch((error) => {
+      console.error("Error querying Firestore:", error);
+    });
+}
+
+// Handle form submission
+document.getElementById("deleteForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get user input values
+  const firstName = document.getElementById("identifier").value;
+  const lastName = document.getElementById("identifier2").value;
+  const age = document.getElementById("identifier3").value; // Parse age as integer
+
+  // Call deleteUser function with user input values as parameters
+  deleteUser(firstName, lastName, age);
+
+  // Clear form fields after deletion
+  document.getElementById("identifier").value = "";
+  document.getElementById("identifier2").value = "";
+  document.getElementById("identifier3").value = "";
+});
+
+
+</script>
+</body> 
+</html>

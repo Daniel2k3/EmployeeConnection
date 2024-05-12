@@ -1,0 +1,4779 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>EmployeeConnection</title> 
+	<link rel = "stylesheet" href = "menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">
+            <div id = "logged-in">
+                <h3>MENU</h3>
+            </div> 
+		</div> 
+        </div>
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<i class="fa fa-bell fa-2x" aria-hidden="true"></i> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<div class="nav-upper-options"> 
+					<div class="nav-option option1"> 
+						<i class="fa fa-home fa-2x" aria-hidden="true"></i> 
+                            <a href="adminHOME.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>HOME</h3></a>
+					</div> 
+
+					<div class="option2 nav-option"> 
+						<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+						<a href="Calendar.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>CALENDAR</h3></a>
+					</div> 
+
+					<div class="nav-option option3"> 
+						<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+						<a href="report.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 3px;">
+                            <h3>REPORT</h3></a> 
+					</div> 
+
+					<div class="nav-option option4"> 
+						<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+						<a href="menu.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 10px;">
+                            <h3>MENU</h3></a>
+					</div> 
+
+					<div class="nav-option option5"> 
+						<i class="fa fa-users fa-2x" aria-hidden="true"></i>
+						<a href="residents.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 -55px;">
+                            <h3>RESIDENTS</h3></a> 
+					</div> 
+
+					<div class="nav-option option6"> 
+						<i class="fa fa-list-ol fa-2x" aria-hidden="true"></i>
+						<a href="salon.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 0px;">
+                            <h3>ACTIVITIES</h3></a> 
+					</div> 
+                    
+                    <form action = "" id = "LOGOUT">
+					<div class="nav-option logout"> 
+						<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+                        
+						<button type = "submit" class = "login-btn" style = "border: none; background: none; font-size:medium; 
+                        font-weight: bolder; padding: 0 0px 0 0px; cursor: pointer;">
+                        <h3>LOGOUT</h3>
+                        </button>
+					</div> 
+                    </form>
+				</div> 
+			</nav> 
+		</div>
+
+        
+
+<div style = "position:relative; left:450px;">
+        <!-- Book -->
+        <div id="book" class="book">
+
+            <!-- ALways Available -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <h1>Always Available</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">BREAKFAST</h3>
+                                <tr>
+                                  <td><span id = "men1" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men4" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des4" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                            
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men5" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des5" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men7" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des7" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men8" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des8" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <h1>Always Available</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">LUNCH</h3>
+                                <tr>
+                                  <td><span id = "men1-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men4-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des4-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                            
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men5-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des5-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">DINNER</h3>
+                                <h4 style = "text-align: left; text-decoration: underline;">Entree</h>
+                                <tr>
+                                  <td><span id = "men7-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des7-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men8-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des8-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men9-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des9-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men13-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des13-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+
+                                <tr>
+                                  <td><span id = "men14-" style = "font-size: 13.5px;"></span></td>
+                                  <td><span> </span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p1" id ="des14-" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                    </div>
+            </div>
+            </div>
+
+            <!-- Mon -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <h1>Monday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Lunch</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_1" placeholder="Enter new title">
+        <input type="text" id="des_1" placeholder="Enter new description">
+        <button id="updateButton" style="  padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_2" placeholder="Enter new title">
+        <input type="text" id="des_2" placeholder="Enter new description">
+        <button id="updateButton2" style=" padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup" placeholder="Enter new title">
+        <input type="text" id="des_3" placeholder="Enter new description">
+        <button id="updateButton3" style="  padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad" placeholder="Enter new title">
+        <input type="text" id="des_4" placeholder="Enter new description">
+        <button id="updateButton4" style=" padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert" placeholder="Enter new title">
+        <input type="text" id="des_5" placeholder="Enter new description">
+        <button id="updateButton5" style="  padding: 5px 5px; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men9" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des9" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men10" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des10" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men11" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des11" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men12" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des12" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men13" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des13" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h1>Monday - Dinner</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Dinner</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup3()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay3" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_13" placeholder="Enter new title">
+        <input type="text" id="des_13" placeholder="Enter new description">
+        <button id="updateButton03" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_23" placeholder="Enter new title">
+        <input type="text" id="des_23" placeholder="Enter new description">
+        <button id="updateButton23" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup3" placeholder="Enter new title">
+        <input type="text" id="des_33" placeholder="Enter new description">
+        <button id="updateButton33" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad3" placeholder="Enter new title">
+        <input type="text" id="des_43" placeholder="Enter new description">
+        <button id="updateButton43" style="
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert3" placeholder="Enter new title">
+        <input type="text" id="des_53" placeholder="Enter new description">
+        <button id="updateButton53" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup3()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men93" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des93" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men103" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des103" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men113" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des113" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men123" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des123" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men133" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p2" id ="des133" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tues -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h1>Tuesday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Lunch</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup4()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay4" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_14" placeholder="Enter new title">
+        <input type="text" id="des_14" placeholder="Enter new description">
+        <button id="updateButton04" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_24" placeholder="Enter new title">
+        <input type="text" id="des_24" placeholder="Enter new description">
+        <button id="updateButton24" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup44" placeholder="Enter new title">
+        <input type="text" id="des_344" placeholder="Enter new description">
+        <button id="updateButton344" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad4" placeholder="Enter new title">
+        <input type="text" id="des_44" placeholder="Enter new description">
+        <button id="updateButton44" style="padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert4" placeholder="Enter new title">
+        <input type="text" id="des_54" placeholder="Enter new description">
+        <button id="updateButton54" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup4()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men94" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des94" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men104" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des104" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men114" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des114" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men124" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des124" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men134" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des134" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>Tuesday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Dinner</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup5()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay5" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_15" placeholder="Enter new title">
+        <input type="text" id="des_15" placeholder="Enter new description">
+        <button id="updateButton05" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_25" placeholder="Enter new title">
+        <input type="text" id="des_25" placeholder="Enter new description">
+        <button id="updateButton25" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup5" placeholder="Enter new title">
+        <input type="text" id="des_35" placeholder="Enter new description">
+        <button id="updateButton345" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad5" placeholder="Enter new title">
+        <input type="text" id="des_45" placeholder="Enter new description">
+        <button id="updateButton45" style="
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert5" placeholder="Enter new title">
+        <input type="text" id="des_55" placeholder="Enter new description">
+        <button id="updateButton55" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup5()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men95" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des95" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men105" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des105" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men115" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des115" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men125" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des125" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men135" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p3" id ="des135" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Wed -->
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <h1>Wednesday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Lunch</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup6()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay6" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_146" placeholder="Enter new title">
+        <input type="text" id="des_146" placeholder="Enter new description">
+        <button id="updateButton046" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_246" placeholder="Enter new title">
+        <input type="text" id="des_246" placeholder="Enter new description">
+        <button id="updateButton246" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup446" placeholder="Enter new title">
+        <input type="text" id="des_3446" placeholder="Enter new description">
+        <button id="updateButton3446" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad46" placeholder="Enter new title">
+        <input type="text" id="des_446" placeholder="Enter new description">
+        <button id="updateButton446" style="padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert46" placeholder="Enter new title">
+        <input type="text" id="des_546" placeholder="Enter new description">
+        <button id="updateButton546" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup6()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men946" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des946" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men1046" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1046" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men1146" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1146" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men1246" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1246" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men1346" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1346" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content">
+                        <h1>Wednesday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Dinner</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup7()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay7" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_156" placeholder="Enter new title">
+        <input type="text" id="des_156" placeholder="Enter new description">
+        <button id="updateButton056" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_256" placeholder="Enter new title">
+        <input type="text" id="des_256" placeholder="Enter new description">
+        <button id="updateButton256" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup56" placeholder="Enter new title">
+        <input type="text" id="des_356" placeholder="Enter new description">
+        <button id="updateButton3456" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad56" placeholder="Enter new title">
+        <input type="text" id="des_456" placeholder="Enter new description">
+        <button id="updateButton456" style="
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert56" placeholder="Enter new title">
+        <input type="text" id="des_556" placeholder="Enter new description">
+        <button id="updateButton556" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup7()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men956" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des956" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men1056" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1056" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men1156" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1156" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men1256" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1256" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men1356" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des1356" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thurs -->
+            <div id="p5" class="paper">
+                <div class="front">
+                    <div id="f5" class="front-content">
+                        <h1>Thursday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">LUNCH</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup8()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay8" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_1467" placeholder="Enter new title">
+        <input type="text" id="des_1467" placeholder="Enter new description">
+        <button id="updateButton0467" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_2467" placeholder="Enter new title">
+        <input type="text" id="des_2467" placeholder="Enter new description">
+        <button id="updateButton2467" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup4467" placeholder="Enter new title">
+        <input type="text" id="des_34467" placeholder="Enter new description">
+        <button id="updateButton34467" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad467" placeholder="Enter new title">
+        <input type="text" id="des_4467" placeholder="Enter new description">
+        <button id="updateButton4467" style="padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert467" placeholder="Enter new title">
+        <input type="text" id="des_5467" placeholder="Enter new description">
+        <button id="updateButton5467" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup8()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men9467" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des9467" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men10467" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des10467" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men11467" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des11467" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men12467" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des12467" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men13467" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des13467" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content">
+                        <h1>Thursday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">DINNER</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup9()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay9" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_1567" placeholder="Enter new title">
+        <input type="text" id="des_1567" placeholder="Enter new description">
+        <button id="updateButton0567" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_2567" placeholder="Enter new title">
+        <input type="text" id="des_2567" placeholder="Enter new description">
+        <button id="updateButton2567" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup567" placeholder="Enter new title">
+        <input type="text" id="des_3567" placeholder="Enter new description">
+        <button id="updateButton34567" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad567" placeholder="Enter new title">
+        <input type="text" id="des_4567" placeholder="Enter new description">
+        <button id="updateButton4567" style="
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert567" placeholder="Enter new title">
+        <input type="text" id="des_5567" placeholder="Enter new description">
+        <button id="updateButton5567" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup9()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men9567" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des9567" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men10567" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des10567" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men11567" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des11567" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men12567" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des12567" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men13567" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des13567" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div id="p6" class="paper">
+                <div class="front">
+                    <div id="f6" class="front-content">
+                        <h1>Friday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Lunch</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup10()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay10" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_1468" placeholder="Enter new title">
+        <input type="text" id="des_1468" placeholder="Enter new description">
+        <button id="updateButton0468" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_2468" placeholder="Enter new title">
+        <input type="text" id="des_2468" placeholder="Enter new description">
+        <button id="updateButton2468" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup4468" placeholder="Enter new title">
+        <input type="text" id="des_34468" placeholder="Enter new description">
+        <button id="updateButton34468" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad468" placeholder="Enter new title">
+        <input type="text" id="des_4468" placeholder="Enter new description">
+        <button id="updateButton4468" style="padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert468" placeholder="Enter new title">
+        <input type="text" id="des_5468" placeholder="Enter new description">
+        <button id="updateButton5468" style=" padding: 5px 5px;
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup10()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men9468" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p6" id ="des9468" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men10468" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p6" id ="des10468" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men11468" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p6" id ="des11468" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men12468" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p6" id ="des12468" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men13468" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p6" id ="des13468" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b6" class="back-content">
+                        <h1>Friday</h1>
+                    </div>
+                    <div class = "container">
+                        <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h3 style = "text-align: center;">Dinner</h3>
+                                <h4 style = "text-align: left;">Entree</h>
+                                <button class="btn-open-popup" onclick="togglePopup11()" 
+                                style = "font-weight: bolder;">Update Menu</button>
+  
+
+        <div id="popupOverlay11" 
+                class="overlay-container"> 
+               <div class="popup-box">
+        <p>Entree 1</p>
+        <input type="text" id="entree_1568" placeholder="Enter new title">
+        <input type="text" id="des_1568" placeholder="Enter new description">
+        <button id="updateButton0568" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <p>Entree 2</p>
+        <input type="text" id="entree_2568" placeholder="Enter new title">
+        <input type="text" id="des_2568" placeholder="Enter new description">
+        <button id="updateButton2568" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Soup</p>
+        <input type="text" id="soup568" placeholder="Enter new title">
+        <input type="text" id="des_3568" placeholder="Enter new description">
+        <button id="updateButton34568" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Salad</p>
+        <input type="text" id="salad568" placeholder="Enter new title">
+        <input type="text" id="des_4568" placeholder="Enter new description">
+        <button id="updateButton4568" style="
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+
+        <p>Dessert</p>
+        <input type="text" id="dessert568" placeholder="Enter new title">
+        <input type="text" id="des_5568" placeholder="Enter new description">
+        <button id="updateButton5568" style=" 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, color 0.3s ease; ">Update</button>
+        <button class="btn-close-popup" onclick="togglePopup11()">Close</button>
+    </div>
+</div>
+
+                                <tr>
+                                  <td><span id = "men9568" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des9568" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <tr>
+                                  <td><span id = "men10568" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des10568" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Soup</h>
+                                <tr>
+                                  <td><span id = "men11568" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des11568" style = "font-size: 13px;"><em></em></p>
+                          </div>
+
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Salad</h>
+                                <tr>
+                                  <td><span id = "men12568" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des12568" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                          
+                          
+                          <div class="menu">
+                            <table style="border: none;">
+                              <tbody>
+                                <h4 style = "text-align: left; text-decoration: underline;">Dessert</h>
+                                <tr>
+                                  <td><span id = "men13568" style = "font-size: 13.5px;"></span></td>
+                                  <td><span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          <p class="p4" id ="des13568" style = "font-size: 13px;"><em></em></p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+        </div>
+
+        <button id="prev-btn">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+</div>
+
+<script>
+ function submit_form() {
+document.submitInfo.reset(); 
+}
+
+function togglePopup() { 
+    const overlay = document.getElementById('popupOverlay'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup3() { 
+    const overlay = document.getElementById('popupOverlay3'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup4() { 
+    const overlay = document.getElementById('popupOverlay4'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup5() { 
+    const overlay = document.getElementById('popupOverlay5'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup6() { 
+    const overlay = document.getElementById('popupOverlay6'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup7() { 
+    const overlay = document.getElementById('popupOverlay7'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup8() { 
+    const overlay = document.getElementById('popupOverlay8'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup9() { 
+    const overlay = document.getElementById('popupOverlay9'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup10() { 
+    const overlay = document.getElementById('popupOverlay10'); 
+    overlay.classList.toggle('show'); 
+} 
+
+function togglePopup11() { 
+    const overlay = document.getElementById('popupOverlay11'); 
+    overlay.classList.toggle('show'); 
+} 
+</script>
+
+<!--Book SCript-->
+<script>
+    const prevBtn = document.querySelector("#prev-btn");
+const nextBtn = document.querySelector("#next-btn");
+const book = document.querySelector("#book");
+
+const paper1 = document.querySelector("#p1");
+const paper2 = document.querySelector("#p2");
+const paper3 = document.querySelector("#p3");
+const paper4 = document.querySelector("#p4");
+const paper5 = document.querySelector("#p5");
+const paper6 = document.querySelector("#p6");
+
+// Event Listener
+prevBtn.addEventListener("click", goPrevPage);
+nextBtn.addEventListener("click", goNextPage);
+
+let currentLocation = 1;
+let numOfPapers = 8;
+let maxLocation = numOfPapers + 1;
+
+function openBook() {
+    book.style.transform = "translateX(50%)";
+    prevBtn.style.transform = "translateX(-180px)";
+    nextBtn.style.transform = "translateX(180px)";
+}
+
+function closeBook(isAtBeginning) {
+    if(isAtBeginning) {
+        book.style.transform = "translateX(0%)";
+    } else {
+        book.style.transform = "translateX(100%)";
+    }
+    
+    prevBtn.style.transform = "translateX(0px)";
+    nextBtn.style.transform = "translateX(0px)";
+}
+
+function goNextPage() {
+    if(currentLocation < maxLocation) {
+        switch(currentLocation) {
+            case 1:
+                openBook();
+                paper1.classList.add("flipped");
+                paper1.style.zIndex = 1;
+                break;
+            case 2:
+                paper2.classList.add("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 3:
+                paper3.classList.add("flipped");
+                paper3.style.zIndex = 3;
+                break;
+            case 4:
+                paper4.classList.add("flipped");
+                paper4.style.zIndex = 4;
+                break;
+            case 5:
+                paper5.classList.add("flipped");
+                paper5.style.zIndex = 5;
+                break;
+            case 6:
+                paper6.classList.add("flipped");
+                paper6.style.zIndex = 6;
+                closeBook(false);
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+        currentLocation++;
+    }
+}
+
+function goPrevPage() {
+    if(currentLocation > 1) {
+        switch(currentLocation) {
+            case 2:
+                closeBook(true);
+                paper1.classList.remove("flipped");
+                paper1.style.zIndex = 8;
+                break;
+            case 3:
+                paper2.classList.remove("flipped");
+                paper2.style.zIndex = 7;
+                break;
+            case 4:
+                paper3.classList.remove("flipped");
+                paper3.style.zIndex = 6;
+                break;
+
+            case 5:
+                paper4.classList.remove("flipped");
+                paper4.style.zIndex = 5;
+                break;
+            case 6:
+                paper5.classList.remove("flipped");
+                paper5.style.zIndex = 4;
+                break;
+            case 7:
+            closeBook(true);
+                paper6.classList.remove("flipped");
+                paper6.style.zIndex = 3;
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+
+        currentLocation--;
+    }
+}
+</script>
+
+<script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+<script src = "https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+	
+<script type="module">
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    const firebaseConfig = {
+            apiKey: "api here",
+            authDomain: "family-connections-bc7c6.firebaseapp.com",
+            databaseURL: "https://family-connections-bc7c6-default-rtdb.firebaseio.com",
+            projectId: "family-connections-bc7c6",
+            storageBucket: "family-connections-bc7c6.appspot.com",
+            messagingSenderId: "681718117358",
+            appId: "1:681718117358:web:b2ad9bcbd2542ddf1554ff",
+            measurementId: "G-YWV61PD4LS"
+            };
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+            const sub = document.getElementById('LOGOUT');
+            
+            //const auth = getAuth(app);
+            firebase.auth().onAuthStateChanged(function(user){
+    var logged = document.getElementById("logged-in")
+  })
+  sub.addEventListener("submit",function(event){
+            event.preventDefault()
+  firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+  alert("Signing out");
+  window.location.href = "AdminMOCK.html";
+}).catch((error) =>{
+  // An error happened.
+});
+  })
+
+
+//Inputs data into menu (AA-breakfast-eggs)
+// Reference to the subcollection
+const subcollection = db.collection('Menu').doc('Always_available').collection('breakfast');
+const documentReff = subcollection.doc('eggs');
+// Function to display document data on HTML page
+function displayDocument(data) {
+    const titleElement = document.getElementById('men1');
+    titleElement.innerText = data.Main;
+
+    const descriptionElement = document.getElementById('des');
+    descriptionElement.innerText = data.maindes;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReff.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+//Inputs data into menu (AA-breakfast-entree)
+// Reference to the subcollection
+const subcollection2 = db.collection('Menu').doc('Always_available').collection('breakfast');
+const documentReff2 = subcollection2.doc('entree');
+// Function to display document data on HTML page
+function displayDocument2(data) {
+    const titleElement4 = document.getElementById('men4');
+    titleElement4.innerText = data.entree1;
+    // Update description element
+    const descriptionElement4 = document.getElementById('des4');
+    descriptionElement4.innerText = data.de1;
+
+    const titleElement5 = document.getElementById('men5');
+    titleElement5.innerText = data.entree2;
+    // Update description element
+    const descriptionElement5 = document.getElementById('des5');
+    descriptionElement5.innerText = data.de2;
+}
+
+
+// Fetch the document (AA-breakfast--entree)
+documentReff2.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument2(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+//Inputs data into menu (AA-breakfast-carbs)
+// Reference to the subcollection
+const subcollection3 = db.collection('Menu').doc('Always_available').collection('breakfast');
+const documentReff3 = subcollection3.doc('carbohydrate');
+// Function to display document data on HTML page
+function displayDocument3(data) {
+    const titleElement7 = document.getElementById('men7');
+    titleElement7.innerText = data.maincarb;
+    // Update description element
+    const descriptionElement7 = document.getElementById('des7');
+    descriptionElement7.innerText = data.mainD;
+    
+}
+
+
+// Fetch the document (AA-breakfast--carbs)
+documentReff3.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument3(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection4 = db.collection('Menu').doc('Always_available').collection('breakfast');
+const documentReff4 = subcollection4.doc('toast');
+// Function to display document data on HTML page
+function displayDocument4(data) {
+    const titleElement8 = document.getElementById('men8');
+    titleElement8.innerText = data.mainT;
+    // Update description element
+    const descriptionElement8 = document.getElementById('des8');
+    descriptionElement8.innerText = data.mainD;
+    
+}
+
+
+// Fetch the document (AA-breakfast--toast)
+documentReff4.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument4(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+
+////////////////////////// AA LUNCH ///////////////////////////////
+
+//Inputs data into menu (AA-breakfast-eggs)
+// Reference to the subcollection
+const subcollectionA = db.collection('Menu').doc('Always_available').collection('lunch');
+const documentReffA = subcollectionA.doc('main_course');
+// Function to display document data on HTML page
+function displayDocumentA(data) {
+    const titleElementA = document.getElementById('men1-');
+    titleElementA.innerText = data.main_entree1;
+
+    const descriptionElementA = document.getElementById('des-');
+    descriptionElementA.innerText = data.de1;
+}
+
+
+// Fetch the document (AA-breakfast--eggs)
+documentReffA.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocumentA(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+//Inputs data into menu (AA-breakfast-entree)
+// Reference to the subcollection
+const subcollection2A = db.collection('Menu').doc('Always_available').collection('lunch');
+const documentReff2A = subcollection2A.doc('main_course');
+// Function to display document data on HTML page
+function displayDocument2A(data) {
+    const titleElement4A = document.getElementById('men4-');
+    titleElement4A.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement4 = document.getElementById('des4-');
+    descriptionElement4.innerText = data.de2;
+
+    const titleElement5A = document.getElementById('men5-');
+    titleElement5A.innerText = data.main_entree3;
+    // Update description element
+    const descriptionElement5A = document.getElementById('des5-');
+    descriptionElement5A.innerText = data.de3;
+}
+
+
+// Fetch the document (AA-breakfast--entree)
+documentReff2A.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument2A(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+///////////////// AA Dinner ////////////////////////////
+
+
+//AA Dinner Main dish
+// Reference to the subcollection
+const subcollection3A = db.collection('Menu').doc('Always_available').collection('dinner');
+const documentReff3A = subcollection3A.doc('main_course');
+// Function to display document data on HTML page
+function displayDocument3A(data) {
+    const titleElement6A = document.getElementById('men7-');
+    titleElement6A.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement4 = document.getElementById('des7-');
+    descriptionElement4.innerText = data.de1;
+
+    const titleElement7A = document.getElementById('men8-');
+    titleElement7A.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement7A = document.getElementById('des8-');
+    descriptionElement7A.innerText = data.de2;
+
+    const titleElement8A = document.getElementById('men9-');
+    titleElement8A.innerText = data.main_entree3;
+    // Update description element
+    const descriptionElement8A = document.getElementById('des9-');
+    descriptionElement8A.innerText = data.de3;
+}
+
+
+// Fetch the document (AA-breakfast--entree)
+documentReff3A.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument3A(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// AA Dinner Dessert
+// Reference to the subcollection
+const subcollection5A = db.collection('Menu').doc('Always_available').collection('dinner');
+const documentReff5A = subcollection5A.doc('desert');
+// Function to display document data on HTML page
+function displayDocument5A(data) {
+
+    const titleElement12A = document.getElementById('men13-');
+    titleElement12A.innerText = data.desert1;
+    // Update description element
+    const descriptionElement12A = document.getElementById('des13-');
+    descriptionElement12A.innerText = data.de1;
+
+    const titleElement13A = document.getElementById('men14-');
+    titleElement13A.innerText = data.desert2;
+    // Update description element
+    const descriptionElement13A = document.getElementById('des14-');
+    descriptionElement13A.innerText = data.de2;
+}
+
+
+// Fetch the document (AA-breakfast--entree)
+documentReff5A.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5A(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+
+///////////////////////////Updating Monday Lunch////////////////////////
+
+
+// Reference to the subcollection
+const subcollection5 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff5 = subcollection5.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument5(data) {
+    const titleElement9 = document.getElementById('men9');
+    titleElement9.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement9 = document.getElementById('des9');
+    descriptionElement9.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff5.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection6 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff6 = subcollection6.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument6(data) {
+    const titleElement10 = document.getElementById('men10');
+    titleElement10.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement10 = document.getElementById('des10');
+    descriptionElement10.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff6.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument6(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection7 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff7 = subcollection7.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument7(data) {
+    const titleElement11 = document.getElementById('men11');
+    titleElement11.innerText = data.soup;
+    // Update description element
+    const descriptionElement11 = document.getElementById('des11');
+    descriptionElement11.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff7.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument7(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection8 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff8 = subcollection8.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument8(data) {
+    const titleElement13 = document.getElementById('men12');
+    titleElement13.innerText = data.salad;
+    // Update description element
+    const descriptionElement13 = document.getElementById('des12');
+    descriptionElement13.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff8.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument8(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection9 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff9 = subcollection9.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument9(data) {
+    const titleElement14 = document.getElementById('men13');
+    titleElement14.innerText = data.dessert;
+    // Update description element
+    const descriptionElement14 = document.getElementById('des13');
+    descriptionElement14.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff9.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument9(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore() {
+    // Update document with the new data
+    documentReff6.update({
+        main_entree1: entree_1.value,
+        des1: des_1.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore2() {
+    // Update document with the new data
+    documentReff6.update({
+        main_entree2: entree_2.value,
+        des2: des_2.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore3() {
+    // Update document with the new data
+    documentReff6.update({
+        soup: soup.value,
+        des3: des_3.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore4() {
+    // Update document with the new data
+    documentReff6.update({
+        salad: salad.value,
+        des4: des_4.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore5() {
+    // Update document with the new data
+    documentReff6.update({
+        dessert: dessert.value,
+        des5: des_5.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_1').value;
+    const newDescription2 = document.getElementById('des_1').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton2').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_2').value;
+    const newDescription2 = document.getElementById('des_2').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore2(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton3').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup').value;
+    const newDescription2 = document.getElementById('des_3').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore3(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton4').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad').value;
+    const newDescription2 = document.getElementById('des_4').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore4(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton5').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert').value;
+    const newDescription2 = document.getElementById('des_5').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore5(newTitle2, newDescription2);
+});
+/*End of Monday LUNCH*/
+
+
+/*Monday DINNER*/////////////////////////////////
+
+// Reference to the subcollection
+const subcollection53 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff53 = subcollection53.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument53(data) {
+    const titleElement93 = document.getElementById('men93');
+    titleElement93.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement93 = document.getElementById('des93');
+    descriptionElement93.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff53.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument53(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection63 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff63 = subcollection63.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument63(data) {
+    const titleElement103 = document.getElementById('men103');
+    titleElement103.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement103 = document.getElementById('des103');
+    descriptionElement103.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff63.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument63(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection73 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff73 = subcollection73.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument73(data) {
+    const titleElement113 = document.getElementById('men113');
+    titleElement113.innerText = data.soup;
+    // Update description element
+    const descriptionElement113 = document.getElementById('des113');
+    descriptionElement113.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff73.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument73(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection83 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff83 = subcollection8.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument83(data) {
+    const titleElement133 = document.getElementById('men123');
+    titleElement133.innerText = data.salad;
+    // Update description element
+    const descriptionElement133 = document.getElementById('des123');
+    descriptionElement133.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff83.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument83(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection93 = db.collection('Menu').doc('daily_specials').collection('monday');
+const documentReff93 = subcollection93.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument93(data) {
+    const titleElement143 = document.getElementById('men133');
+    titleElement143.innerText = data.dessert;
+    // Update description element
+    const descriptionElement143 = document.getElementById('des133');
+    descriptionElement143.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff93.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument93(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore03() {
+    // Update document with the new data
+    documentReff63.update({
+        main_entree1: entree_13.value,
+        des1: des_13.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore23() {
+    // Update document with the new data
+    documentReff63.update({
+        main_entree2: entree_23.value,
+        des2: des_23.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore33() {
+    // Update document with the new data
+    documentReff63.update({
+        soup: soup3.value,
+        des3: des_33.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore43() {
+    // Update document with the new data
+    documentReff63.update({
+        salad: salad3.value,
+        des4: des_43.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore53() {
+    // Update document with the new data
+    documentReff63.update({
+        dessert: dessert3.value,
+        des5: des_53.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton03').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_13').value;
+    const newDescription2 = document.getElementById('des_13').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore03(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton23').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_23').value;
+    const newDescription2 = document.getElementById('des_23').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore23(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton33').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup3').value;
+    const newDescription2 = document.getElementById('des_33').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore33(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton43').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad3').value;
+    const newDescription2 = document.getElementById('des_43').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore43(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton53').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert3').value;
+    const newDescription2 = document.getElementById('des_53').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore53(newTitle2, newDescription2);
+});
+
+/* ENd of Monday DINNER*/
+
+
+/* Updating Tuesday Lunch*///////////
+
+// Reference to the subcollection
+const subcollection54 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff54 = subcollection54.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument54(data) {
+    const titleElement94 = document.getElementById('men94');
+    titleElement94.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement94 = document.getElementById('des94');
+    descriptionElement94.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff54.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument54(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection64 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff64 = subcollection64.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument64(data) {
+    const titleElement104 = document.getElementById('men104');
+    titleElement104.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement104 = document.getElementById('des104');
+    descriptionElement104.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff64.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument64(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection74 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff74 = subcollection74.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument74(data) {
+    const titleElement114 = document.getElementById('men114');
+    titleElement114.innerText = data.soup;
+    // Update description element
+    const descriptionElement114 = document.getElementById('des114');
+    descriptionElement114.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff74.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument74(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection84 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff84 = subcollection84.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument84(data) {
+    const titleElement134 = document.getElementById('men124');
+    titleElement134.innerText = data.salad;
+    // Update description element
+    const descriptionElement134 = document.getElementById('des124');
+    descriptionElement134.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff84.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument84(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection94 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff94 = subcollection94.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument94(data) {
+    const titleElement144 = document.getElementById('men134');
+    titleElement144.innerText = data.dessert;
+    // Update description element
+    const descriptionElement144 = document.getElementById('des134');
+    descriptionElement144.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff94.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument94(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore04() {
+    // Update document with the new data
+    documentReff64.update({
+        main_entree1: entree_14.value,
+        des1: des_14.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore24() {
+    // Update document with the new data
+    documentReff64.update({
+        main_entree2: entree_24.value,
+        des2: des_24.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore34() {
+    // Update document with the new data
+    documentReff64.update({
+        soup: soup44.value,
+        des3: des_344.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore44() {
+    // Update document with the new data
+    documentReff64.update({
+        salad: salad4.value,
+        des4: des_44.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore54() {
+    // Update document with the new data
+    documentReff64.update({
+        dessert: dessert4.value,
+        des5: des_54.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton04').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_14').value;
+    const newDescription2 = document.getElementById('des_14').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore04(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton24').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_24').value;
+    const newDescription2 = document.getElementById('des_24').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore24(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton344').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup44').value;
+    const newDescription2 = document.getElementById('des_344').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore34(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton44').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad4').value;
+    const newDescription2 = document.getElementById('des_44').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore44(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton54').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert4').value;
+    const newDescription2 = document.getElementById('des_54').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore54(newTitle2, newDescription2);
+});
+
+/*End Tuesday lunch*//////////
+
+
+/*Update Tuesday Dinner*//////
+
+
+// Reference to the subcollection
+const subcollection55 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff55 = subcollection55.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument55(data) {
+    const titleElement95 = document.getElementById('men95');
+    titleElement95.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement95 = document.getElementById('des95');
+    descriptionElement95.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff55.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument55(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection65 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff65 = subcollection65.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument65(data) {
+    const titleElement105 = document.getElementById('men105');
+    titleElement105.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement105 = document.getElementById('des105');
+    descriptionElement105.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff65.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument65(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection75 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff75 = subcollection75.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument75(data) {
+    const titleElement115 = document.getElementById('men115');
+    titleElement115.innerText = data.soup;
+    // Update description element
+    const descriptionElement115 = document.getElementById('des115');
+    descriptionElement115.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff75.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument75(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection85 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff85 = subcollection85.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument85(data) {
+    const titleElement135 = document.getElementById('men125');
+    titleElement135.innerText = data.salad;
+    // Update description element
+    const descriptionElement135 = document.getElementById('des125');
+    descriptionElement135.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff85.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument85(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection95 = db.collection('Menu').doc('daily_specials').collection('tuesday');
+const documentReff95 = subcollection95.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument95(data) {
+    const titleElement145 = document.getElementById('men135');
+    titleElement145.innerText = data.dessert;
+    // Update description element
+    const descriptionElement145 = document.getElementById('des135');
+    descriptionElement145.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff95.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument95(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore05() {
+    // Update document with the new data
+    documentReff65.update({
+        main_entree1: entree_15.value,
+        des1: des_15.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore25() {
+    // Update document with the new data
+    documentReff65.update({
+        main_entree2: entree_25.value,
+        des2: des_25.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore35() {
+    // Update document with the new data
+    documentReff65.update({
+        soup: soup5.value,
+        des3: des_35.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore45() {
+    // Update document with the new data
+    documentReff65.update({
+        salad: salad5.value,
+        des4: des_45.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore55() {
+    // Update document with the new data
+    documentReff65.update({
+        dessert: dessert5.value,
+        des5: des_55.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton05').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_15').value;
+    const newDescription2 = document.getElementById('des_15').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore05(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton25').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_25').value;
+    const newDescription2 = document.getElementById('des_25').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore25(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton345').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup5').value;
+    const newDescription2 = document.getElementById('des_35').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore35(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton45').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad5').value;
+    const newDescription2 = document.getElementById('des_45').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore45(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton55').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert5').value;
+    const newDescription2 = document.getElementById('des_55').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore55(newTitle2, newDescription2);
+});
+
+/*End Tuesday Dinner*//////////
+
+/*Update Wednesday lunch*//////////
+
+// Reference to the subcollection
+const subcollection546 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff546 = subcollection546.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument546(data) {
+    const titleElement94 = document.getElementById('men946');
+    titleElement94.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement94 = document.getElementById('des946');
+    descriptionElement94.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff546.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument546(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection646 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff646 = subcollection646.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument646(data) {
+    const titleElement104 = document.getElementById('men1046');
+    titleElement104.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement104 = document.getElementById('des1046');
+    descriptionElement104.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff646.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument646(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection746 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff746 = subcollection746.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument746(data) {
+    const titleElement114 = document.getElementById('men1146');
+    titleElement114.innerText = data.soup;
+    // Update description element
+    const descriptionElement114 = document.getElementById('des1146');
+    descriptionElement114.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff746.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument746(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection846 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff846 = subcollection846.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument846(data) {
+    const titleElement134 = document.getElementById('men1246');
+    titleElement134.innerText = data.salad;
+    // Update description element
+    const descriptionElement134 = document.getElementById('des1246');
+    descriptionElement134.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff846.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument846(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection946 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff946= subcollection946.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument946(data) {
+    const titleElement144 = document.getElementById('men1346');
+    titleElement144.innerText = data.dessert;
+    // Update description element
+    const descriptionElement144 = document.getElementById('des1346');
+    descriptionElement144.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff946.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument946(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore046() {
+    // Update document with the new data
+    documentReff646.update({
+        main_entree1: entree_146.value,
+        des1: des_146.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore246() {
+    // Update document with the new data
+    documentReff646.update({
+        main_entree2: entree_246.value,
+        des2: des_246.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore346() {
+    // Update document with the new data
+    documentReff646.update({
+        soup: soup446.value,
+        des3: des_3446.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore446() {
+    // Update document with the new data
+    documentReff646.update({
+        salad: salad46.value,
+        des4: des_446.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore546() {
+    // Update document with the new data
+    documentReff646.update({
+        dessert: dessert46.value,
+        des5: des_546.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton046').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_146').value;
+    const newDescription2 = document.getElementById('des_146').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore046(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton246').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_246').value;
+    const newDescription2 = document.getElementById('des_246').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore246(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton3446').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup446').value;
+    const newDescription2 = document.getElementById('des_3446').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore346(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton446').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad46').value;
+    const newDescription2 = document.getElementById('des_446').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore446(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton546').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert46').value;
+    const newDescription2 = document.getElementById('des_546').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore546(newTitle2, newDescription2);
+});
+
+
+/*End Wednesday lunch*//////////
+
+/*Update Wednesday Dinner*/
+
+
+// Reference to the subcollection
+const subcollection556 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff556 = subcollection556.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument556(data) {
+    const titleElement95 = document.getElementById('men956');
+    titleElement95.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement95 = document.getElementById('des956');
+    descriptionElement95.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff556.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument556(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection656 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff656 = subcollection656.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument656(data) {
+    const titleElement105 = document.getElementById('men1056');
+    titleElement105.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement105 = document.getElementById('des1056');
+    descriptionElement105.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff656.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument656(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection756 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff756 = subcollection756.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument756(data) {
+    const titleElement115 = document.getElementById('men1156');
+    titleElement115.innerText = data.soup;
+    // Update description element
+    const descriptionElement115 = document.getElementById('des1156');
+    descriptionElement115.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff756.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument756(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection856 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff856 = subcollection856.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument856(data) {
+    const titleElement135 = document.getElementById('men1256');
+    titleElement135.innerText = data.salad;
+    // Update description element
+    const descriptionElement135 = document.getElementById('des1256');
+    descriptionElement135.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff856.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument856(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection956 = db.collection('Menu').doc('daily_specials').collection('wednesday');
+const documentReff956 = subcollection956.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument956(data) {
+    const titleElement145 = document.getElementById('men1356');
+    titleElement145.innerText = data.dessert;
+    // Update description element
+    const descriptionElement145 = document.getElementById('des1356');
+    descriptionElement145.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff956.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument956(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore056() {
+    // Update document with the new data
+    documentReff656.update({
+        main_entree1: entree_156.value,
+        des1: des_156.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore256() {
+    // Update document with the new data
+    documentReff656.update({
+        main_entree2: entree_256.value,
+        des2: des_256.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore356() {
+    // Update document with the new data
+    documentReff656.update({
+        soup: soup56.value,
+        des3: des_356.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore456() {
+    // Update document with the new data
+    documentReff656.update({
+        salad: salad56.value,
+        des4: des_456.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore556() {
+    // Update document with the new data
+    documentReff656.update({
+        dessert: dessert56.value,
+        des5: des_556.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton056').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_156').value;
+    const newDescription2 = document.getElementById('des_156').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore056(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton256').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_256').value;
+    const newDescription2 = document.getElementById('des_256').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore256(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton3456').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup56').value;
+    const newDescription2 = document.getElementById('des_356').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore356(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton456').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad56').value;
+    const newDescription2 = document.getElementById('des_456').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore456(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton556').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert56').value;
+    const newDescription2 = document.getElementById('des_556').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore556(newTitle2, newDescription2);
+});
+
+/*End Wednesday Dinner*/
+
+/*Update Thursday Lunch*//////////////
+
+
+// Reference to the subcollection
+const subcollection5467 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff5467 = subcollection5467.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument5467(data) {
+    const titleElement94 = document.getElementById('men9467');
+    titleElement94.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement94 = document.getElementById('des9467');
+    descriptionElement94.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff5467.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5467(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection6467 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff6467 = subcollection6467.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument6467(data) {
+    const titleElement104 = document.getElementById('men10467');
+    titleElement104.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement104 = document.getElementById('des10467');
+    descriptionElement104.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff6467.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument646(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection7467 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff7467 = subcollection7467.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument7467(data) {
+    const titleElement114 = document.getElementById('men11467');
+    titleElement114.innerText = data.soup;
+    // Update description element
+    const descriptionElement114 = document.getElementById('des11467');
+    descriptionElement114.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff7467.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument7467(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection8467 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff8467 = subcollection8467.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument8467(data) {
+    const titleElement134 = document.getElementById('men12467');
+    titleElement134.innerText = data.salad;
+    // Update description element
+    const descriptionElement134 = document.getElementById('des12467');
+    descriptionElement134.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff8467.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument8467(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection9467 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff9467= subcollection9467.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument9467(data) {
+    const titleElement144 = document.getElementById('men13467');
+    titleElement144.innerText = data.dessert;
+    // Update description element
+    const descriptionElement144 = document.getElementById('des13467');
+    descriptionElement144.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff9467.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument9467(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore0467() {
+    // Update document with the new data
+    documentReff6467.update({
+        main_entree1: entree_1467.value,
+        des1: des_1467.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore2467() {
+    // Update document with the new data
+    documentReff6467.update({
+        main_entree2: entree_2467.value,
+        des2: des_2467.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore3467() {
+    // Update document with the new data
+    documentReff6467.update({
+        soup: soup4467.value,
+        des3: des_34467.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore4467() {
+    // Update document with the new data
+    documentReff6467.update({
+        salad: salad467.value,
+        des4: des_4467.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore5467() {
+    // Update document with the new data
+    documentReff6467.update({
+        dessert: dessert467.value,
+        des5: des_5467.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton0467').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_1467').value;
+    const newDescription2 = document.getElementById('des_1467').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore0467(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton2467').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_2467').value;
+    const newDescription2 = document.getElementById('des_2467').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore2467(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton34467').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup4467').value;
+    const newDescription2 = document.getElementById('des_34467').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore3467(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton4467').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad467').value;
+    const newDescription2 = document.getElementById('des_4467').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore4467(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton5467').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert467').value;
+    const newDescription2 = document.getElementById('des_5467').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore5467(newTitle2, newDescription2);
+});
+
+/*End Thursday Lunch*///////////////////
+
+/*Update Thursday Dinner*///////////////////
+
+// Reference to the subcollection
+const subcollection5567 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff5567 = subcollection5567.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument5567(data) {
+    const titleElement95 = document.getElementById('men9567');
+    titleElement95.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement95 = document.getElementById('des9567');
+    descriptionElement95.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff5567.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5567(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection6567 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff6567 = subcollection6567.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument6567(data) {
+    const titleElement105 = document.getElementById('men10567');
+    titleElement105.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement105 = document.getElementById('des10567');
+    descriptionElement105.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff6567.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument6567(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection7567 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff7567 = subcollection7567.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument7567(data) {
+    const titleElement115 = document.getElementById('men11567');
+    titleElement115.innerText = data.soup;
+    // Update description element
+    const descriptionElement115 = document.getElementById('des11567');
+    descriptionElement115.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff7567.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument7567(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection8567 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff8567 = subcollection8567.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument8567(data) {
+    const titleElement135 = document.getElementById('men12567');
+    titleElement135.innerText = data.salad;
+    // Update description element
+    const descriptionElement135 = document.getElementById('des12567');
+    descriptionElement135.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff8567.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument8567(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection9567 = db.collection('Menu').doc('daily_specials').collection('thursday');
+const documentReff9567 = subcollection9567.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument9567(data) {
+    const titleElement145 = document.getElementById('men13567');
+    titleElement145.innerText = data.dessert;
+    // Update description element
+    const descriptionElement145 = document.getElementById('des13567');
+    descriptionElement145.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff9567.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument9567(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore0567() {
+    // Update document with the new data
+    documentReff6567.update({
+        main_entree1: entree_1567.value,
+        des1: des_1567.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore2567() {
+    // Update document with the new data
+    documentReff6567.update({
+        main_entree2: entree_2567.value,
+        des2: des_2567.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore3567() {
+    // Update document with the new data
+    documentReff6567.update({
+        soup: soup567.value,
+        des3: des_3567.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore4567() {
+    // Update document with the new data
+    documentReff6567.update({
+        salad: salad567.value,
+        des4: des_4567.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore5567() {
+    // Update document with the new data
+    documentReff6567.update({
+        dessert: dessert567.value,
+        des5: des_5567.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton0567').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_1567').value;
+    const newDescription2 = document.getElementById('des_1567').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore0567(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton2567').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_2567').value;
+    const newDescription2 = document.getElementById('des_2567').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore2567(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton34567').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup567').value;
+    const newDescription2 = document.getElementById('des_3567').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore3567(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton4567').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad567').value;
+    const newDescription2 = document.getElementById('des_4567').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore4567(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton5567').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert567').value;
+    const newDescription2 = document.getElementById('des_5567').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore5567(newTitle2, newDescription2);
+});
+
+/*End Thursday Dinner*///////////////////
+
+
+
+/*Update Friday Lunch*///////////////////
+
+// Reference to the subcollection
+const subcollection5468 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff5468 = subcollection5468.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument5468(data) {
+    const titleElement94 = document.getElementById('men9468');
+    titleElement94.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement94 = document.getElementById('des9468');
+    descriptionElement94.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff5468.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5468(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection6468 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff6468 = subcollection6468.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument6468(data) {
+    const titleElement104 = document.getElementById('men10468');
+    titleElement104.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement104 = document.getElementById('des10468');
+    descriptionElement104.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff6468.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument6468(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection7468 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff7468 = subcollection7468.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument7468(data) {
+    const titleElement114 = document.getElementById('men11468');
+    titleElement114.innerText = data.soup;
+    // Update description element
+    const descriptionElement114 = document.getElementById('des11468');
+    descriptionElement114.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff7468.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument7468(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection8468 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff8468 = subcollection8468.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument8468(data) {
+    const titleElement134 = document.getElementById('men12468');
+    titleElement134.innerText = data.salad;
+    // Update description element
+    const descriptionElement134 = document.getElementById('des12468');
+    descriptionElement134.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff8468.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument8468(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection9468 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff9468 = subcollection9468.doc('lunch');
+// Function to display document data on HTML page
+function displayDocument9468(data) {
+    const titleElement144 = document.getElementById('men13468');
+    titleElement144.innerText = data.dessert;
+    // Update description element
+    const descriptionElement144 = document.getElementById('des13468');
+    descriptionElement144.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff9468.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument9468(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore0468() {
+    // Update document with the new data
+    documentReff6468.update({
+        main_entree1: entree_1468.value,
+        des1: des_1468.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore2468() {
+    // Update document with the new data
+    documentReff6468.update({
+        main_entree2: entree_2468.value,
+        des2: des_2468.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore3468() {
+    // Update document with the new data
+    documentReff6468.update({
+        soup: soup4468.value,
+        des3: des_34468.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore4468() {
+    // Update document with the new data
+    documentReff6468.update({
+        salad: salad468.value,
+        des4: des_4468.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore5468() {
+    // Update document with the new data
+    documentReff6468.update({
+        dessert: dessert468.value,
+        des5: des_5468.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton0468').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_1468').value;
+    const newDescription2 = document.getElementById('des_1468').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore0468(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton2468').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_2468').value;
+    const newDescription2 = document.getElementById('des_2468').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore2468(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton34468').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup4468').value;
+    const newDescription2 = document.getElementById('des_34468').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore3468(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton4468').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad468').value;
+    const newDescription2 = document.getElementById('des_4468').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore4468(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton5468').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert468').value;
+    const newDescription2 = document.getElementById('des_5468').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore5468(newTitle2, newDescription2);
+});
+
+/*End Friday Lunch*///////////////////
+
+
+
+/*Update Friday Dinner*///////////////////
+
+// Reference to the subcollection
+const subcollection5568 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff5568 = subcollection5568.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument5568(data) {
+    const titleElement95 = document.getElementById('men9568');
+    titleElement95.innerText = data.main_entree1;
+    // Update description element
+    const descriptionElement95 = document.getElementById('des9568');
+    descriptionElement95.innerText = data.des1;
+    
+}
+
+// Fetch the document (AA-breakfast--toast)
+documentReff5568.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument5568(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+//Inputs data into menu (AA-breakfast-toast)
+// Reference to the subcollection
+const subcollection6568 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff6568 = subcollection6568.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument6568(data) {
+    const titleElement105 = document.getElementById('men10568');
+    titleElement105.innerText = data.main_entree2;
+    // Update description element
+    const descriptionElement105 = document.getElementById('des10568');
+    descriptionElement105.innerText = data.des2;
+}
+// Fetch the document (AA-breakfast--toast)
+documentReff6568.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument6568(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+// Reference to the subcollection
+const subcollection7568 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff7568 = subcollection7568.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument7568(data) {
+    const titleElement115 = document.getElementById('men11568');
+    titleElement115.innerText = data.soup;
+    // Update description element
+    const descriptionElement115 = document.getElementById('des11568');
+    descriptionElement115.innerText = data.des3;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff7568.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument7568(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection8568 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff8568 = subcollection8568.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument8568(data) {
+    const titleElement135 = document.getElementById('men12568');
+    titleElement135.innerText = data.salad;
+    // Update description element
+    const descriptionElement135 = document.getElementById('des12568');
+    descriptionElement135.innerText = data.des4;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff8568.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument8568(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+
+// Reference to the subcollection
+const subcollection9568 = db.collection('Menu').doc('daily_specials').collection('friday');
+const documentReff9568 = subcollection9568.doc('dinner');
+// Function to display document data on HTML page
+function displayDocument9568(data) {
+    const titleElement145 = document.getElementById('men13568');
+    titleElement145.innerText = data.dessert;
+    // Update description element
+    const descriptionElement145 = document.getElementById('des13568');
+    descriptionElement145.innerText = data.des5;
+}
+// Fetch the document (AA-breakfast--Soup)
+documentReff9568.get().then((doc) => {
+    if (doc.exists) {
+        // Document found, extract the data and display it
+        const data = doc.data();
+        console.log("Document data:", data);
+        
+        // Display document data on HTML page
+        displayDocument9568(data);
+    } else {
+        // Document doesn't exist
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+function updateDocumentInFirestore0568() {
+    // Update document with the new data
+    documentReff6568.update({
+        main_entree1: entree_1568.value,
+        des1: des_1568.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore2568() {
+    // Update document with the new data
+    documentReff6568.update({
+        main_entree2: entree_2568.value,
+        des2: des_2568.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore3568() {
+    // Update document with the new data
+    documentReff6568.update({
+        soup: soup568.value,
+        des3: des_3568.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore4568() {
+    // Update document with the new data
+    documentReff6568.update({
+        salad: salad568.value,
+        des4: des_4568.value,
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+function updateDocumentInFirestore5568() {
+    // Update document with the new data
+    documentReff6568.update({
+        dessert: dessert568.value,
+        des5: des_5568.value
+    })
+    .then(() => {
+        alert("Document successfully updated!");
+    })
+    .catch((error) => {
+        alert("Error updating document: ", error);
+    });
+}
+
+document.getElementById('updateButton0568').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_1568').value;
+    const newDescription2 = document.getElementById('des_1568').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore0568(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton2568').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('entree_2568').value;
+    const newDescription2 = document.getElementById('des_2568').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore2568(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton34568').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('soup568').value;
+    const newDescription2 = document.getElementById('des_3568').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore3568(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton4568').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('salad568').value;
+    const newDescription2 = document.getElementById('des_4568').value;
+
+    // Update Firestore with user input
+    updateDocumentInFirestore4568(newTitle2, newDescription2);
+});
+
+document.getElementById('updateButton5568').addEventListener('click', () => {
+    // Get user input
+    const newTitle2 = document.getElementById('dessert568').value;
+    const newDescription2 = document.getElementById('des_5568').value;
+  
+    // Update Firestore with user input
+    updateDocumentInFirestore5568(newTitle2, newDescription2);
+});
+
+/*End Friday Dinner*///////////////////
+
+
+</script>
+</body> 
+</html>

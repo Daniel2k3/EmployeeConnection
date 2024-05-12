@@ -1,0 +1,78 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(rgba(199, 198, 220, 0.5),rgba(199, 198, 220, 0.5)), url("shutterstock_670139794-5d88c42b18ff4be4b83c0d272940f7c8.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.wrapper{
+    width:420px;
+    background: transparent;
+    color: black;
+    border: 2px solid white;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    padding: 30px 40px;
+    backdrop-filter: blur(2px);
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height:50px;
+    margin:30px 0;
+}
+
+.input-box input{
+    width:100%;
+    height:100%;
+    background:transparent;
+    border: none;
+    outline: none;
+    border: 3px solid black;
+    border-radius: 40px;
+    padding:20px 45px 20px 20px;
+    color:black;
+    font-weight: bolder;
+}
+
+
+
+.input-box input::placeholder{
+    color:black;
+    font-weight: bolder;
+}
+
+.wrapper .login-btn{
+    border: 3px solid black;
+    width: 100%;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 30px;
+    margin-left: 0px;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: orange;
+}
+
+.login-btn:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}

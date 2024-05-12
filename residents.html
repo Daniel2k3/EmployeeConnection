@@ -1,0 +1,476 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>EmployeeConnection</title> 
+	<link rel = "stylesheet" href = "resident.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+
+<body> 
+
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">
+            <div id = "logged-in">
+                <h3>Resident List</h3>
+            </div> 
+		</div> 
+        </div>
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<i class="fa fa-bell fa-2x" aria-hidden="true"></i> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<div class="nav-upper-options"> 
+					<div class="nav-option option1"> 
+						<i class="fa fa-home fa-2x" aria-hidden="true"></i> 
+                            <a href="adminHOME.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>HOME</h3></a>
+					</div> 
+
+					<div class="option2 nav-option"> 
+						<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+						<a href="Calendar.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>CALENDAR</h3></a>
+					</div> 
+
+					<div class="nav-option option3"> 
+						<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+						<a href="report.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 3px;">
+                            <h3>REPORT</h3></a> 
+					</div> 
+
+					<div class="nav-option option4"> 
+						<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+						<a href="menu.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 10px;">
+                            <h3>MENU</h3></a>
+					</div> 
+
+					<div class="nav-option option5"> 
+						<i class="fa fa-users fa-2x" aria-hidden="true"></i>
+						<a href="residents.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 -55px;">
+                            <h3>RESIDENTS</h3></a> 
+					</div> 
+
+					<div class="nav-option option6"> 
+						<i class="fa fa-list-ol fa-2x" aria-hidden="true"></i>
+						<a href="salon.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 0px;">
+                            <h3>ACTIVITIES</h3></a> 
+					</div> 
+                    
+                    <form action = "" id = "LOGOUT">
+					<div class="nav-option logout"> 
+						<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+                        
+						<button type = "submit" class = "login-btn" style = "border: none; background: none; font-size:medium; 
+                        font-weight: bolder; padding: 0 0px 0 0px; cursor: pointer;">
+                        <h3>LOGOUT</h3>
+                        </button>
+					</div> 
+                    </form>
+				</div> 
+			</nav> 
+		</div>
+
+        <div class = "container">
+            <button class="btn-open-popup" onclick="togglePopup()" style = "font-weight: bolder;">Add Resident</button> 
+            <button class="btn-open-popup" onclick="togglePop()" style = "font-weight: bolder;">Delete Resident</button> 
+        <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Room</th>
+                
+
+            </tr>
+            </thead>
+            <tbody id="myTable">
+            </tbody>
+        </table>
+</div>
+
+<style>
+.btn-open-popup { 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, color 0.3s ease;  
+        } 
+  
+        .btn-open-popup:hover { 
+            background-color: #8785f4; 
+        } 
+  
+        .overlay-container { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0, 0, 0, 0.6); 
+            justify-content: center; 
+            align-items: center; 
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+        } 
+  
+        .popup-box { 
+            width:75%;
+            height: 75%;
+        margin: auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border:double;
+        background-color: white;
+        padding:15px;
+        } 
+  
+        .form-container { 
+            display: flex; 
+            flex-direction: column; 
+        } 
+  
+        .form-label { 
+            margin-bottom: 10px; 
+            font-size: 16px; 
+            color: white; 
+            text-align: left; 
+        } 
+  
+        .form-input { 
+            padding: 4px; 
+            margin-bottom: 20px;
+            margin-left: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            width:40%;
+            height: 50%;
+            box-sizing: border-box; 
+        } 
+  
+        .btn-submit, 
+        .btn-close-popup { 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, color 0.3s ease; 
+        } 
+  
+        .btn-submit { 
+            background-color: green; 
+            color: #fff; 
+        } 
+  
+        .btn-close-popup { 
+             
+            background-color: #e74c3c; 
+            color: #fff; 
+        } 
+  
+        .btn-submit:hover, 
+        .btn-close-popup:hover { 
+            background-color: #4caf50; 
+        } 
+  
+        /* Keyframes for fadeInUp animation */ 
+        @keyframes fadeInUp { 
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+        } 
+  
+        /* Animation for popup */ 
+        .overlay-container.show { 
+            display: flex; 
+            opacity: 1; 
+        }  
+</style>
+<body>          
+                <div id="popupOverlay" 
+                class="overlay-container"> 
+               <div class="popup-box">
+           <form class = "form-container" id="submitInfo">
+     <div style="padding:4px; background-color:#353232; color:#f3f1f1; ">
+                    <br> 
+         <div width='100%' style="padding:2px; background-color:#f7f1f1; color:#000000; ">
+                <b> Add Resident: </b></div> 
+                <br>
+                <label class="form-label" > Username: </label> 
+         <input class="form-input" type="text" 
+                placeholder="Enter Resident's Name" 
+                id="username" > 
+                <br>
+         <label class="form-label" >Email:</label> 
+         <input class="form-input" type="email" 
+                placeholder="Email"
+                id="email"  required>
+                <br>
+                <label class="form-label"> Room #: </label> 
+         <input class="form-input" type="number" 
+                placeholder="Room #" 
+                id="room"  required> 
+                <br>
+                <label class="form-label" > Diet: </label> 
+         <input class="form-input" type="text" 
+                placeholder="Diet" 
+                id="diet"  required> 
+                <br>
+         <label class="form-label" >Allergy:</label> 
+         <input class="form-input" type="text" 
+                placeholder="Allergy"
+                id="all"  required> 
+                <br>
+         <label class="form-label" >Allergy Type:</label> 
+         <input class="form-input" type="text" 
+                placeholder="Allergy Type"
+                id="type"  required>
+                <br>
+                <label class="form-label" > Lifestyle: </label> 
+         <input class="form-input" type="text" 
+                placeholder="Lifestyle" 
+                id="life" required>
+                <br>
+                <label class="form-label" > Phone #: </label> 
+         <input class="form-input" type="number" 
+                placeholder="Phone #" 
+                id="phone"  required>
+                <br>
+
+                <button class="btn-submit"type="submit" onclick="submit_form()">Submit</button> 
+                <button class="btn-close-popup" onclick="togglePopup()">Close</button>
+           
+         </div> 
+        </form>
+         </div>
+        </div>  
+
+
+        <div id="popupOver" class="overlay-container"> 
+            <div class="popup-box" style = "margin: auto; height: 200px;">
+            <div id="event-section">
+                <form class = "form-container" id="deleteForm">
+                    <div style="padding:4px; background-color:#353232; color:#f3f1f1; ">
+                                   <br> 
+                        <div width='100%' style="padding:2px; background-color:#f7f1f1; color:#000000; ">
+                               <b> Delete Resident: </b></div> 
+                               <br>
+            <label for="identifier">Enter Resident:</label>
+            <input type="text" id="identifier" name="identifier" required>
+            <br>
+            <label for="identifier2">Enter room:</label>
+            <input type="text" id="identifier2" name="identifier2" required>
+            <br>
+            
+            <button class="btn-close-popup" type="submit">Delete</button>
+            <button class="btn-close-popup" onclick="togglePop()">Close</button>
+        </div>
+          </form>
+            </div>
+        </div>
+          </div>
+        
+          <script>
+           
+        </script>
+
+                        <script> 
+                            function togglePopup() { 
+                                const overlay = document.getElementById('popupOverlay'); 
+                                overlay.classList.toggle('show'); 
+                            } 
+
+                            function togglePop(){
+                                const over = document.getElementById('popupOver'); 
+                                over.classList.toggle('show'); 
+                            }
+                        </script> 
+</body>
+<script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+<script src = "https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+	
+<script type="module">
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    const firebaseConfig = {
+            apiKey: "api here",
+            authDomain: "family-connections-bc7c6.firebaseapp.com",
+            databaseURL: "https://family-connections-bc7c6-default-rtdb.firebaseio.com",
+            projectId: "family-connections-bc7c6",
+            storageBucket: "family-connections-bc7c6.appspot.com",
+            messagingSenderId: "681718117358",
+            appId: "1:681718117358:web:b2ad9bcbd2542ddf1554ff",
+            measurementId: "G-YWV61PD4LS"
+            };
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+            const sub = document.getElementById('LOGOUT');
+            
+            //const auth = getAuth(app);
+            firebase.auth().onAuthStateChanged(function(user){
+    var logged = document.getElementById("logged-in")
+  })
+  sub.addEventListener("submit",function(event){
+            event.preventDefault()
+  firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+  alert("Signing out");
+  window.location.href = "AdminMOCK.html";
+}).catch((error) =>{
+  // An error happened.
+});
+  })
+
+function submit_form() {
+document.submitInfo.submit();
+document.submitInfo.reset(); 
+}
+
+
+/*This allows the form to be sent and added to the firestore database*/
+let form = document.querySelector('#submitInfo');
+
+form.addEventListener('submit',(e)=> {
+
+e.preventDefault();//keeps page from refreshing
+db.collection('ResidentS').add({
+  Name: form.username.value, //and new line to add more fields
+  Allergy: form.all.value,
+  Allergy_Type: form.type.value,
+  Diet: form.diet.value,
+  Room: form.room.value,
+  Lifestyle: form.life.value,
+  Email: form.email.value,
+  Phone: form.phone.value,
+});
+form.username.value = "";
+form.all.value ="";
+form.type.value = "";
+form.diet.value = "";
+form.room.value = "";
+ form.life.value ="";
+form.email.value = "";
+form.phone.value= "";
+})
+
+/*Adds to the table from the database based on the submitted form*/
+  db.collection("ResidentS").get().then(querySnapshot=>{
+        querySnapshot.forEach(doc=> {
+            let data = doc.data();
+            let row  = `<tr>
+                            <td>${data.Name}</td>
+                            <td>${doc.id}</td>
+                            <td>${data.Room}</td>
+                      </tr>`;
+            let table = document.getElementById('myTable')
+            table.innerHTML += row
+        })
+    })
+    .catch(err=>{
+        console.log(`Error: ${err}`)
+    });
+
+
+    function deleteUser(identifier,identifier2) {
+  // Query Firestore to find the user document based on the identifier
+  db.collection("ResidentS").where("Name", "==", identifier).where("Room", "==", identifier2).get()
+    .then((querySnapshot) => {
+       // Check if any matching documents are found
+       if (querySnapshot.size === 0) {
+        alert("User not found");
+        return; // Exit function if no matching documents are found
+      }
+      querySnapshot.forEach((doc) => {
+        // Delete the user document from Firestore
+        db.collection("ResidentS").doc(doc.id).delete()
+          .then(() => {
+            alert("Event successfully deleted");
+          })
+          .catch((error) => {
+            alert("Error deleting user from Firestore:", error);
+          });
+      });
+    })
+    .catch((error) => {
+      console.error("Error querying Firestore:", error);
+    });
+}
+            // Handle form submission
+        document.getElementById("deleteForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent form submission
+        
+          // Get user input values
+          const firstName = document.getElementById("identifier").value;
+          const lastName = document.getElementById("identifier2").value;
+        
+          // Call deleteUser function with user input values as parameters
+          deleteUser(firstName, lastName);
+        
+          // Clear form fields after deletion
+          document.getElementById("identifier").value = "";
+          document.getElementById("identifier2").value = "";
+        });
+
+</script>
+</body> 
+</html>

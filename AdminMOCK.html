@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width , initial-scale = 1.0">
+        <title>FamilyConnection</title>
+        <link rel = "stylesheet" href = "AdminHOMEMOCK.css">
+    </head>
+
+
+<body>
+
+<div class="wrapper">
+    <form action = "" id = "login">
+        <h1>EmployeeConnection</h1>
+        <div class = "input-box">
+            <input type = "text" autocomplete="off" id ="uname" placeholder = "Username" required>
+        </div>
+        <div class = "input-box">
+            <input type = "password" id = "pass" placeholder = "Password" required>
+        </div> 
+        <button type = "submit" class = "login-btn">Login</button>
+        
+    </form>
+</div>
+<script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+<script src = "https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+	
+<script type="module">
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    const firebaseConfig = {
+            apiKey: "API here",
+            authDomain: "family-connections-bc7c6.firebaseapp.com",
+            databaseURL: "https://family-connections-bc7c6-default-rtdb.firebaseio.com",
+            projectId: "family-connections-bc7c6",
+            storageBucket: "family-connections-bc7c6.appspot.com",
+            messagingSenderId: "681718117358",
+            appId: "1:681718117358:web:b2ad9bcbd2542ddf1554ff",
+            measurementId: "G-YWV61PD4LS"
+            };
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+            
+            //const auth = getAuth(app);
+/*
+let messagesRef = firebase.database().ref('Collected Data');
+
+document.getElementById('login')
+    .addEventListener('submit', submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    // Get values
+    let uname = getInputVal('uname');
+    let pass = getInputVal('pass');
+
+    saveMessage(uname, pass);
+    document.getElementById('login').reset();
+}
+
+// Function to get form values
+function getInputVal(id) {
+    return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(uname, pass) {
+    let newMessageRef = messagesRef.push();
+    newMessageRef.set({
+        username: uname,
+        password: pass,
+    });
+		}*/
+
+        
+        const sub = document.getElementById('login');
+        
+        sub.addEventListener("submit",function(event){
+            event.preventDefault()
+            const user = document.getElementById('uname').value;
+        const passw = document.getElementById('pass').value;
+       /* db.collection("Admin").add({
+            uname: user,
+            pass: passw,
+        })*/
+        firebase.auth().signInWithEmailAndPassword(user, passw)
+  .then((userCredential) => {
+    // Signed up 
+    const use = userCredential.use;
+    // ...
+    alert("Signing In");
+    window.location.href = "adminHOME.html";
+  })
+  .catch((error) => {
+    const errorMessage = alert("Incorrect email/password");
+  });
+        })
+	</script>
+</body>
+
+
+</html>

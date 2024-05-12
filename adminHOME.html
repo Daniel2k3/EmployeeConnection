@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+	<title>EmployeeConnection</title> 
+	<link rel = "stylesheet" href = "HOME.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+
+<body> 
+	
+	<!-- for header part -->
+	<header> 
+
+		<div class="logosec"> 
+			<div class="logo">
+            <div id = "logged-in">
+                <h3>Welcome Back <span id = "user-email"></span></h3>
+            </div> 
+		</div> 
+        </div>
+
+		<div class="message"> 
+			<div class="circle"></div> 
+			<i class="fa fa-bell fa-2x" aria-hidden="true"></i> 
+			</div> 
+		</div> 
+
+	</header> 
+
+	<div class="main-container"> 
+		<div class="navcontainer"> 
+			<nav class="nav"> 
+				<div class="nav-upper-options"> 
+					<div class="nav-option option1"> 
+						<i class="fa fa-home fa-2x" aria-hidden="true"></i> 
+                            <a href="adminHOME.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>HOME</h3></a>
+					</div> 
+
+					<div class="option2 nav-option"> 
+						<i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+						<a href="Calendar.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 5px;">
+                            <h3>CALENDAR</h3></a>
+					</div> 
+
+					<div class="nav-option option3"> 
+						<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+						<a href="report.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 3px;">
+                            <h3>REPORT</h3></a> 
+					</div> 
+
+					<div class="nav-option option4"> 
+						<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+						<a href="menu.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 10px;">
+                            <h3>MENU</h3></a>
+					</div> 
+
+					<div class="nav-option option5"> 
+						<i class="fa fa-users fa-2x" aria-hidden="true"></i>
+						<a href="residents.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 -55px;">
+                            <h3>RESIDENTS</h3></a> 
+					</div> 
+
+					<div class="nav-option option6"> 
+						<i class="fa fa-list-ol fa-2x" aria-hidden="true"></i>
+						<a href="salon.html" style="width: 500px; 
+                            height: 60px; 
+                            display: flex; 
+                            color:black;
+                            text-decoration: none;
+                            align-items: center; 
+                            padding: 0 0px 0 0px;">
+                            <h3>ACTIVITIES</h3></a> 
+					</div> 
+                    
+                    <form action = "" id = "LOGOUT">
+					<div class="nav-option logout"> 
+						<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+                        
+						<button type = "submit" class = "login-btn" style = "border: none; background: none; font-size:medium; 
+                        font-weight: bolder; padding: 0 0px 0 0px; cursor: pointer;">
+                        <h3>LOGOUT</h3>
+                        </button>
+					</div> 
+                    </form>
+				</div> 
+			</nav> 
+		</div> 
+
+
+
+<script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+</script>
+<script src = "https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+	
+<script type="module">
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    const firebaseConfig = {
+            apiKey: "API here ",
+            authDomain: "family-connections-bc7c6.firebaseapp.com",
+            databaseURL: "https://family-connections-bc7c6-default-rtdb.firebaseio.com",
+            projectId: "family-connections-bc7c6",
+            storageBucket: "family-connections-bc7c6.appspot.com",
+            messagingSenderId: "681718117358",
+            appId: "1:681718117358:web:b2ad9bcbd2542ddf1554ff",
+            measurementId: "G-YWV61PD4LS"
+            };
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+            const sub = document.getElementById('LOGOUT');
+            
+            //const auth = getAuth(app);
+            firebase.auth().onAuthStateChanged(function(user){
+    var logged = document.getElementById("logged-in")
+    if(user){
+        logged.style.display = 'block';
+        document.getElementById("user-email").innerText = firebase.auth().currentUser.email;
+    }
+  })
+  sub.addEventListener("submit",function(event){
+            event.preventDefault()
+  firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+  alert("Signing out");
+  window.location.href = "AdminMOCK.html";
+}).catch((error) => {
+  // An error happened.
+});
+  })
+</script>
+
+    
+</body> 
+</html>

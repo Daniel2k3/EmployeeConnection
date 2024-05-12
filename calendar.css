@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+  /* Main CSS Here */
+
+    * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: "Poppins", sans-serif; 
+    } 
+    :root { 
+    --background-color1: #fafaff; 
+    --background-color2: #ffffff; 
+    --background-color3: #ededed; 
+    --background-color4: #cad7fda4; 
+    --primary-color: #4b49ac; 
+    --secondary-color: #0c007d; 
+    --Border-color: #3f0097; 
+    --one-use-color: #3f0097; 
+    --two-use-color: #5500cb; 
+    } 
+    body { 
+    background-color: var(--background-color4); 
+    max-width: 100%; 
+    overflow-x: hidden; 
+    } 
+    
+    header { 
+    height: 70px; 
+    width: 100vw; 
+    padding: 0 30px; 
+    background-color: var(--background-color1); 
+    position: fixed; 
+    z-index: 100; 
+    box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    } 
+    
+    .logo { 
+    font-size: 23px; 
+    font-weight: 600; 
+    color: rgb(47, 141, 70); 
+    } 
+    
+    .message, 
+    .logosec { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    
+    } 
+    
+    .main-container { 
+    display: flex; 
+    width: 100vw; 
+    position: relative; 
+    top: 70px; 
+    z-index: 1; 
+    } 
+    
+    .main { 
+    height: calc(100vh - 70px); 
+    width: 100%; 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    padding: 40px 30px 30px 30px; 
+    } 
+    
+    .main::-webkit-scrollbar-track { 
+    background-color: #9e9e9eb2; 
+    } 
+    
+    .box-container { 
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 50px; 
+    } 
+    .nav { 
+    min-height: 91vh; 
+    width: 250px; 
+    background-color: var(--background-color2); 
+    position: absolute; 
+    top: 0px; 
+    left: 00; 
+    box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    overflow: hidden; 
+    padding: 30px 0 20px 10px; 
+    } 
+    .navcontainer { 
+    height: calc(100vh - 70px); 
+    width: 250px; 
+    position: relative; 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    transition: all 0.5s ease-in-out; 
+    } 
+    .navcontainer::-webkit-scrollbar { 
+    display: none; 
+    } 
+    .navclose { 
+    width: 80px; 
+    } 
+    .nav-option { 
+    width: 250px; 
+    height: 60px; 
+    display: flex; 
+    align-items: center; 
+    font-weight: 100px;
+    padding: 0 30px 0 20px; 
+    gap: 20px; 
+    transition: all 0.1s ease-in-out; 
+    } 
+    .nav-option:hover { 
+    border-left: 5px solid #a2a2a2; 
+    background-color: #dadada; 
+    cursor: pointer; 
+    } 
+    
+    .nav-upper-options { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 25px; 
+    } 
+
+    .fa{
+        color: #4b49ac;
+    }
+
+    h3 span{
+        padding: 0 30px 0 15px;
+    }
+
+
+    /*CALENDAR*/
+
+    :root {
+      --primary-color: #f90a39;
+      --text-color: #1d1d1d;
+      --bg-color: #f1f1fb;
+    }
+    .container {
+      width: 100%;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .calendar {
+      width: 100%;
+      max-width: 600px;
+      padding: 30px 20px;
+      border-radius: 10px;
+      background-color: var(--bg-color);
+    }
+    .calendar .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .calendar .header .month {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+    .calendar .header .btns {
+      display: flex;
+      gap: 10px;
+    }
+    .calendar .header .btns .btn {
+      width: 50px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      color: #fff;
+      background-color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .calendar .header .btns .btn:hover {
+      background-color: gray;
+      transform: scale(1.05);
+    }
+    .weekdays {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .weekdays .day {
+      width: calc(100% / 7 - 10px);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .days {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .days .day {
+      width: calc(100% / 7 - 10px);
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-color);
+      background-color: #fff;
+      transition: all 0.3s;
+    }
+    .days .day:not(.next):not(.prev):hover {
+      color: #fff;
+      background-color: var(--primary-color);
+      transform: scale(1.05);
+    }
+    .days .day.today {
+      color: #fff;
+      background-color: var(--primary-color);
+    }
+    .days .day.next,
+    .days .day.prev {
+      color: #ccc;
+    }
+
+    #event-section {
+      padding: 10px;
+      background: #f5f5f5;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+  }
+   
+  .container-calendar #left h1 {
+      color: #4b49ac;
+      text-align: center;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 10px 0;
+  }
+   
+  #event-section h3 {
+      color: #4b49ac;
+      font-size: 18px;
+      margin: 0;
+  }
+   
+  #event-section input[type="date"],
+  #event-section input[type="text"] {
+      margin: 10px 0;
+      padding: 5px;
+      width: 80%;
+  }
+   
+  #event-section button {
+      background: #4b49ac;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+  }
+   
+  .event-marker {
+      position: relative;
+  }
+   
+  .event-marker::after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .btn-open-popup { 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease;  
+} 
+
+.btn-open-popup:hover { 
+    background-color: #8785f4; 
+} 
+
+.btn-close-popup { 
+  padding: 15px 24px; 
+  border: none; 
+  margin-left: center;
+  border-radius: 8px; 
+  cursor: pointer; 
+  background-color: #8785f4;
+  transition: background-color 0.3s ease, color 0.3s ease;  
+} 
+
+.btn-close-popup:hover { 
+  background-image:  linear-gradient(rgba(99, 99, 231, 0.5),rgba(105, 101, 235, 0.5));
+} 
+
+.overlay-container { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+} 
+
+.popup-box { 
+    width:75%;
+    height: 75%;
+margin: auto;
+font-family: Georgia, 'Times New Roman', Times, serif;
+border:double;
+background-color: white;
+padding:15px;
+} 
+
+/* Animation for popup */ 
+.overlay-container.show { 
+  display: flex; 
+  opacity: 1; 
+}  
+
+.tablecontainer {
+  width:80%;
+        margin: auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border:double;
+        background-color: white;
+        padding:15px;
+}
+
+.scrollit {
+  overflow:scroll;
+  /*height:300px;*/
+  height:auto;
+}
+
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+.event-marker {
+  position: relative;
+}
+
+.event-marker::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.day.scheduled {
+  text-decoration: underline;
+}
+
+.day.scheduled::after {
+  content: "●";
+  display: block;
+  color: red;
+}
